@@ -1,0 +1,1274 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/area.gd" id="1_klvhf"]
+[ext_resource type="Script" path="res://scripts/interactable.gd" id="2_weq4w"]
+
+[node name="Tower" type="Node2D" unique_id=138688334]
+script = ExtResource("1_klvhf")
+title = "Old Tower"
+width = 1000.0
+
+[node name="Background" type="Parallax2D" parent="." unique_id=546964096]
+scroll_scale = Vector2(0.35, 1)
+
+[node name="Wall" type="Polygon2D" parent="Background" unique_id=1156331566]
+color = Color(0.2901961, 0.2901961, 0.34509805, 1)
+polygon = PackedVector2Array(-20, 0, 1034, 0, 1034, 540, -20, 540)
+
+[node name="Bricks" type="Node2D" parent="Background" unique_id=778995746]
+
+[node name="Brick" type="Polygon2D" parent="Background/Bricks" unique_id=992748085]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(-38, 2, 38, 2, 38, 28, -38, 28)
+
+[node name="Brick2" type="Polygon2D" parent="Background/Bricks" unique_id=938044445]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(42, 2, 118, 2, 118, 28, 42, 28)
+
+[node name="Brick3" type="Polygon2D" parent="Background/Bricks" unique_id=1746142138]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(122, 2, 198, 2, 198, 28, 122, 28)
+
+[node name="Brick4" type="Polygon2D" parent="Background/Bricks" unique_id=1932083331]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(202, 2, 278, 2, 278, 28, 202, 28)
+
+[node name="Brick5" type="Polygon2D" parent="Background/Bricks" unique_id=1794047999]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(282, 2, 358, 2, 358, 28, 282, 28)
+
+[node name="Brick6" type="Polygon2D" parent="Background/Bricks" unique_id=535576934]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(362, 2, 438, 2, 438, 28, 362, 28)
+
+[node name="Brick7" type="Polygon2D" parent="Background/Bricks" unique_id=1343732313]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(442, 2, 518, 2, 518, 28, 442, 28)
+
+[node name="Brick8" type="Polygon2D" parent="Background/Bricks" unique_id=819374900]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(522, 2, 598, 2, 598, 28, 522, 28)
+
+[node name="Brick9" type="Polygon2D" parent="Background/Bricks" unique_id=2006411692]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(602, 2, 678, 2, 678, 28, 602, 28)
+
+[node name="Brick10" type="Polygon2D" parent="Background/Bricks" unique_id=1499208672]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(682, 2, 758, 2, 758, 28, 682, 28)
+
+[node name="Brick11" type="Polygon2D" parent="Background/Bricks" unique_id=1249799102]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(762, 2, 838, 2, 838, 28, 762, 28)
+
+[node name="Brick12" type="Polygon2D" parent="Background/Bricks" unique_id=584529151]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(842, 2, 918, 2, 918, 28, 842, 28)
+
+[node name="Brick13" type="Polygon2D" parent="Background/Bricks" unique_id=14385514]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(922, 2, 998, 2, 998, 28, 922, 28)
+
+[node name="Brick14" type="Polygon2D" parent="Background/Bricks" unique_id=2094843738]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(1002, 2, 1078, 2, 1078, 28, 1002, 28)
+
+[node name="Brick15" type="Polygon2D" parent="Background/Bricks" unique_id=1790051885]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(2, 32, 78, 32, 78, 58, 2, 58)
+
+[node name="Brick16" type="Polygon2D" parent="Background/Bricks" unique_id=315490989]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(82, 32, 158, 32, 158, 58, 82, 58)
+
+[node name="Brick17" type="Polygon2D" parent="Background/Bricks" unique_id=1965985589]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(162, 32, 238, 32, 238, 58, 162, 58)
+
+[node name="Brick18" type="Polygon2D" parent="Background/Bricks" unique_id=2110079178]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(242, 32, 318, 32, 318, 58, 242, 58)
+
+[node name="Brick19" type="Polygon2D" parent="Background/Bricks" unique_id=67461741]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(322, 32, 398, 32, 398, 58, 322, 58)
+
+[node name="Brick20" type="Polygon2D" parent="Background/Bricks" unique_id=1554550657]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(402, 32, 478, 32, 478, 58, 402, 58)
+
+[node name="Brick21" type="Polygon2D" parent="Background/Bricks" unique_id=1663120988]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(482, 32, 558, 32, 558, 58, 482, 58)
+
+[node name="Brick22" type="Polygon2D" parent="Background/Bricks" unique_id=1868437342]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(562, 32, 638, 32, 638, 58, 562, 58)
+
+[node name="Brick23" type="Polygon2D" parent="Background/Bricks" unique_id=395953338]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(642, 32, 718, 32, 718, 58, 642, 58)
+
+[node name="Brick24" type="Polygon2D" parent="Background/Bricks" unique_id=1338624984]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(722, 32, 798, 32, 798, 58, 722, 58)
+
+[node name="Brick25" type="Polygon2D" parent="Background/Bricks" unique_id=112022021]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(802, 32, 878, 32, 878, 58, 802, 58)
+
+[node name="Brick26" type="Polygon2D" parent="Background/Bricks" unique_id=2135919403]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(882, 32, 958, 32, 958, 58, 882, 58)
+
+[node name="Brick27" type="Polygon2D" parent="Background/Bricks" unique_id=1911924030]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(962, 32, 1038, 32, 1038, 58, 962, 58)
+
+[node name="Brick28" type="Polygon2D" parent="Background/Bricks" unique_id=624101579]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(1042, 32, 1118, 32, 1118, 58, 1042, 58)
+
+[node name="Brick29" type="Polygon2D" parent="Background/Bricks" unique_id=901154188]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(-38, 62, 38, 62, 38, 88, -38, 88)
+
+[node name="Brick30" type="Polygon2D" parent="Background/Bricks" unique_id=1012788038]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(42, 62, 118, 62, 118, 88, 42, 88)
+
+[node name="Brick31" type="Polygon2D" parent="Background/Bricks" unique_id=1945630618]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(122, 62, 198, 62, 198, 88, 122, 88)
+
+[node name="Brick32" type="Polygon2D" parent="Background/Bricks" unique_id=1530521434]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(202, 62, 278, 62, 278, 88, 202, 88)
+
+[node name="Brick33" type="Polygon2D" parent="Background/Bricks" unique_id=1319746586]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(282, 62, 358, 62, 358, 88, 282, 88)
+
+[node name="Brick34" type="Polygon2D" parent="Background/Bricks" unique_id=554481656]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(362, 62, 438, 62, 438, 88, 362, 88)
+
+[node name="Brick35" type="Polygon2D" parent="Background/Bricks" unique_id=168761226]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(442, 62, 518, 62, 518, 88, 442, 88)
+
+[node name="Brick36" type="Polygon2D" parent="Background/Bricks" unique_id=360002625]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(522, 62, 598, 62, 598, 88, 522, 88)
+
+[node name="Brick37" type="Polygon2D" parent="Background/Bricks" unique_id=1550280948]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(602, 62, 678, 62, 678, 88, 602, 88)
+
+[node name="Brick38" type="Polygon2D" parent="Background/Bricks" unique_id=670674725]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(682, 62, 758, 62, 758, 88, 682, 88)
+
+[node name="Brick39" type="Polygon2D" parent="Background/Bricks" unique_id=248231111]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(762, 62, 838, 62, 838, 88, 762, 88)
+
+[node name="Brick40" type="Polygon2D" parent="Background/Bricks" unique_id=1966619738]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(842, 62, 918, 62, 918, 88, 842, 88)
+
+[node name="Brick41" type="Polygon2D" parent="Background/Bricks" unique_id=961564459]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(922, 62, 998, 62, 998, 88, 922, 88)
+
+[node name="Brick42" type="Polygon2D" parent="Background/Bricks" unique_id=369696883]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(1002, 62, 1078, 62, 1078, 88, 1002, 88)
+
+[node name="Brick43" type="Polygon2D" parent="Background/Bricks" unique_id=1739607133]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(2, 92, 78, 92, 78, 118, 2, 118)
+
+[node name="Brick44" type="Polygon2D" parent="Background/Bricks" unique_id=2106469505]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(82, 92, 158, 92, 158, 118, 82, 118)
+
+[node name="Brick45" type="Polygon2D" parent="Background/Bricks" unique_id=1840230702]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(162, 92, 238, 92, 238, 118, 162, 118)
+
+[node name="Brick46" type="Polygon2D" parent="Background/Bricks" unique_id=1906984589]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(242, 92, 318, 92, 318, 118, 242, 118)
+
+[node name="Brick47" type="Polygon2D" parent="Background/Bricks" unique_id=725745007]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(322, 92, 398, 92, 398, 118, 322, 118)
+
+[node name="Brick48" type="Polygon2D" parent="Background/Bricks" unique_id=775078506]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(402, 92, 478, 92, 478, 118, 402, 118)
+
+[node name="Brick49" type="Polygon2D" parent="Background/Bricks" unique_id=1921490261]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(482, 92, 558, 92, 558, 118, 482, 118)
+
+[node name="Brick50" type="Polygon2D" parent="Background/Bricks" unique_id=654382837]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(562, 92, 638, 92, 638, 118, 562, 118)
+
+[node name="Brick51" type="Polygon2D" parent="Background/Bricks" unique_id=1997808796]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(642, 92, 718, 92, 718, 118, 642, 118)
+
+[node name="Brick52" type="Polygon2D" parent="Background/Bricks" unique_id=1927165964]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(722, 92, 798, 92, 798, 118, 722, 118)
+
+[node name="Brick53" type="Polygon2D" parent="Background/Bricks" unique_id=609436811]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(802, 92, 878, 92, 878, 118, 802, 118)
+
+[node name="Brick54" type="Polygon2D" parent="Background/Bricks" unique_id=1799986394]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(882, 92, 958, 92, 958, 118, 882, 118)
+
+[node name="Brick55" type="Polygon2D" parent="Background/Bricks" unique_id=1357941286]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(962, 92, 1038, 92, 1038, 118, 962, 118)
+
+[node name="Brick56" type="Polygon2D" parent="Background/Bricks" unique_id=2034709725]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(1042, 92, 1118, 92, 1118, 118, 1042, 118)
+
+[node name="Brick57" type="Polygon2D" parent="Background/Bricks" unique_id=224031257]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(-38, 122, 38, 122, 38, 148, -38, 148)
+
+[node name="Brick58" type="Polygon2D" parent="Background/Bricks" unique_id=1283774720]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(42, 122, 118, 122, 118, 148, 42, 148)
+
+[node name="Brick59" type="Polygon2D" parent="Background/Bricks" unique_id=1913470221]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(122, 122, 198, 122, 198, 148, 122, 148)
+
+[node name="Brick60" type="Polygon2D" parent="Background/Bricks" unique_id=278974135]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(202, 122, 278, 122, 278, 148, 202, 148)
+
+[node name="Brick61" type="Polygon2D" parent="Background/Bricks" unique_id=271535270]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(282, 122, 358, 122, 358, 148, 282, 148)
+
+[node name="Brick62" type="Polygon2D" parent="Background/Bricks" unique_id=2084260841]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(362, 122, 438, 122, 438, 148, 362, 148)
+
+[node name="Brick63" type="Polygon2D" parent="Background/Bricks" unique_id=1115914326]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(442, 122, 518, 122, 518, 148, 442, 148)
+
+[node name="Brick64" type="Polygon2D" parent="Background/Bricks" unique_id=730265]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(522, 122, 598, 122, 598, 148, 522, 148)
+
+[node name="Brick65" type="Polygon2D" parent="Background/Bricks" unique_id=94403154]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(602, 122, 678, 122, 678, 148, 602, 148)
+
+[node name="Brick66" type="Polygon2D" parent="Background/Bricks" unique_id=146683385]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(682, 122, 758, 122, 758, 148, 682, 148)
+
+[node name="Brick67" type="Polygon2D" parent="Background/Bricks" unique_id=1899188362]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(762, 122, 838, 122, 838, 148, 762, 148)
+
+[node name="Brick68" type="Polygon2D" parent="Background/Bricks" unique_id=1439014527]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(842, 122, 918, 122, 918, 148, 842, 148)
+
+[node name="Brick69" type="Polygon2D" parent="Background/Bricks" unique_id=1154760356]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(922, 122, 998, 122, 998, 148, 922, 148)
+
+[node name="Brick70" type="Polygon2D" parent="Background/Bricks" unique_id=490955861]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(1002, 122, 1078, 122, 1078, 148, 1002, 148)
+
+[node name="Brick71" type="Polygon2D" parent="Background/Bricks" unique_id=1699900713]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(2, 152, 78, 152, 78, 178, 2, 178)
+
+[node name="Brick72" type="Polygon2D" parent="Background/Bricks" unique_id=993681626]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(82, 152, 158, 152, 158, 178, 82, 178)
+
+[node name="Brick73" type="Polygon2D" parent="Background/Bricks" unique_id=1312365168]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(162, 152, 238, 152, 238, 178, 162, 178)
+
+[node name="Brick74" type="Polygon2D" parent="Background/Bricks" unique_id=1911605425]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(242, 152, 318, 152, 318, 178, 242, 178)
+
+[node name="Brick75" type="Polygon2D" parent="Background/Bricks" unique_id=1297071854]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(322, 152, 398, 152, 398, 178, 322, 178)
+
+[node name="Brick76" type="Polygon2D" parent="Background/Bricks" unique_id=1534293454]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(402, 152, 478, 152, 478, 178, 402, 178)
+
+[node name="Brick77" type="Polygon2D" parent="Background/Bricks" unique_id=517594794]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(482, 152, 558, 152, 558, 178, 482, 178)
+
+[node name="Brick78" type="Polygon2D" parent="Background/Bricks" unique_id=788352584]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(562, 152, 638, 152, 638, 178, 562, 178)
+
+[node name="Brick79" type="Polygon2D" parent="Background/Bricks" unique_id=1533796103]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(642, 152, 718, 152, 718, 178, 642, 178)
+
+[node name="Brick80" type="Polygon2D" parent="Background/Bricks" unique_id=349228788]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(722, 152, 798, 152, 798, 178, 722, 178)
+
+[node name="Brick81" type="Polygon2D" parent="Background/Bricks" unique_id=630349950]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(802, 152, 878, 152, 878, 178, 802, 178)
+
+[node name="Brick82" type="Polygon2D" parent="Background/Bricks" unique_id=749124451]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(882, 152, 958, 152, 958, 178, 882, 178)
+
+[node name="Brick83" type="Polygon2D" parent="Background/Bricks" unique_id=306838488]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(962, 152, 1038, 152, 1038, 178, 962, 178)
+
+[node name="Brick84" type="Polygon2D" parent="Background/Bricks" unique_id=1757101460]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(1042, 152, 1118, 152, 1118, 178, 1042, 178)
+
+[node name="Brick85" type="Polygon2D" parent="Background/Bricks" unique_id=971806272]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(-38, 182, 38, 182, 38, 208, -38, 208)
+
+[node name="Brick86" type="Polygon2D" parent="Background/Bricks" unique_id=634787900]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(42, 182, 118, 182, 118, 208, 42, 208)
+
+[node name="Brick87" type="Polygon2D" parent="Background/Bricks" unique_id=1846258115]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(122, 182, 198, 182, 198, 208, 122, 208)
+
+[node name="Brick88" type="Polygon2D" parent="Background/Bricks" unique_id=810663324]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(202, 182, 278, 182, 278, 208, 202, 208)
+
+[node name="Brick89" type="Polygon2D" parent="Background/Bricks" unique_id=1693704420]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(282, 182, 358, 182, 358, 208, 282, 208)
+
+[node name="Brick90" type="Polygon2D" parent="Background/Bricks" unique_id=1732388682]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(362, 182, 438, 182, 438, 208, 362, 208)
+
+[node name="Brick91" type="Polygon2D" parent="Background/Bricks" unique_id=789672035]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(442, 182, 518, 182, 518, 208, 442, 208)
+
+[node name="Brick92" type="Polygon2D" parent="Background/Bricks" unique_id=1645262374]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(522, 182, 598, 182, 598, 208, 522, 208)
+
+[node name="Brick93" type="Polygon2D" parent="Background/Bricks" unique_id=786019656]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(602, 182, 678, 182, 678, 208, 602, 208)
+
+[node name="Brick94" type="Polygon2D" parent="Background/Bricks" unique_id=820855356]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(682, 182, 758, 182, 758, 208, 682, 208)
+
+[node name="Brick95" type="Polygon2D" parent="Background/Bricks" unique_id=546022162]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(762, 182, 838, 182, 838, 208, 762, 208)
+
+[node name="Brick96" type="Polygon2D" parent="Background/Bricks" unique_id=1009737499]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(842, 182, 918, 182, 918, 208, 842, 208)
+
+[node name="Brick97" type="Polygon2D" parent="Background/Bricks" unique_id=1594464587]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(922, 182, 998, 182, 998, 208, 922, 208)
+
+[node name="Brick98" type="Polygon2D" parent="Background/Bricks" unique_id=157297095]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(1002, 182, 1078, 182, 1078, 208, 1002, 208)
+
+[node name="Brick99" type="Polygon2D" parent="Background/Bricks" unique_id=1159884084]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(2, 212, 78, 212, 78, 238, 2, 238)
+
+[node name="Brick100" type="Polygon2D" parent="Background/Bricks" unique_id=1327669025]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(82, 212, 158, 212, 158, 238, 82, 238)
+
+[node name="Brick101" type="Polygon2D" parent="Background/Bricks" unique_id=1206021777]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(162, 212, 238, 212, 238, 238, 162, 238)
+
+[node name="Brick102" type="Polygon2D" parent="Background/Bricks" unique_id=1007574674]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(242, 212, 318, 212, 318, 238, 242, 238)
+
+[node name="Brick103" type="Polygon2D" parent="Background/Bricks" unique_id=52748200]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(322, 212, 398, 212, 398, 238, 322, 238)
+
+[node name="Brick104" type="Polygon2D" parent="Background/Bricks" unique_id=1281854201]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(402, 212, 478, 212, 478, 238, 402, 238)
+
+[node name="Brick105" type="Polygon2D" parent="Background/Bricks" unique_id=1666960204]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(482, 212, 558, 212, 558, 238, 482, 238)
+
+[node name="Brick106" type="Polygon2D" parent="Background/Bricks" unique_id=447225673]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(562, 212, 638, 212, 638, 238, 562, 238)
+
+[node name="Brick107" type="Polygon2D" parent="Background/Bricks" unique_id=1570086477]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(642, 212, 718, 212, 718, 238, 642, 238)
+
+[node name="Brick108" type="Polygon2D" parent="Background/Bricks" unique_id=565263095]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(722, 212, 798, 212, 798, 238, 722, 238)
+
+[node name="Brick109" type="Polygon2D" parent="Background/Bricks" unique_id=1212617856]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(802, 212, 878, 212, 878, 238, 802, 238)
+
+[node name="Brick110" type="Polygon2D" parent="Background/Bricks" unique_id=208763608]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(882, 212, 958, 212, 958, 238, 882, 238)
+
+[node name="Brick111" type="Polygon2D" parent="Background/Bricks" unique_id=916764408]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(962, 212, 1038, 212, 1038, 238, 962, 238)
+
+[node name="Brick112" type="Polygon2D" parent="Background/Bricks" unique_id=597518481]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(1042, 212, 1118, 212, 1118, 238, 1042, 238)
+
+[node name="Brick113" type="Polygon2D" parent="Background/Bricks" unique_id=631766966]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(-38, 242, 38, 242, 38, 268, -38, 268)
+
+[node name="Brick114" type="Polygon2D" parent="Background/Bricks" unique_id=1608114301]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(42, 242, 118, 242, 118, 268, 42, 268)
+
+[node name="Brick115" type="Polygon2D" parent="Background/Bricks" unique_id=1996898771]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(122, 242, 198, 242, 198, 268, 122, 268)
+
+[node name="Brick116" type="Polygon2D" parent="Background/Bricks" unique_id=1406306712]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(202, 242, 278, 242, 278, 268, 202, 268)
+
+[node name="Brick117" type="Polygon2D" parent="Background/Bricks" unique_id=1645941602]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(282, 242, 358, 242, 358, 268, 282, 268)
+
+[node name="Brick118" type="Polygon2D" parent="Background/Bricks" unique_id=324381535]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(362, 242, 438, 242, 438, 268, 362, 268)
+
+[node name="Brick119" type="Polygon2D" parent="Background/Bricks" unique_id=35714558]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(442, 242, 518, 242, 518, 268, 442, 268)
+
+[node name="Brick120" type="Polygon2D" parent="Background/Bricks" unique_id=1887695009]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(522, 242, 598, 242, 598, 268, 522, 268)
+
+[node name="Brick121" type="Polygon2D" parent="Background/Bricks" unique_id=353678357]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(602, 242, 678, 242, 678, 268, 602, 268)
+
+[node name="Brick122" type="Polygon2D" parent="Background/Bricks" unique_id=1706302095]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(682, 242, 758, 242, 758, 268, 682, 268)
+
+[node name="Brick123" type="Polygon2D" parent="Background/Bricks" unique_id=773831409]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(762, 242, 838, 242, 838, 268, 762, 268)
+
+[node name="Brick124" type="Polygon2D" parent="Background/Bricks" unique_id=1770673778]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(842, 242, 918, 242, 918, 268, 842, 268)
+
+[node name="Brick125" type="Polygon2D" parent="Background/Bricks" unique_id=948437420]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(922, 242, 998, 242, 998, 268, 922, 268)
+
+[node name="Brick126" type="Polygon2D" parent="Background/Bricks" unique_id=1262284006]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(1002, 242, 1078, 242, 1078, 268, 1002, 268)
+
+[node name="Brick127" type="Polygon2D" parent="Background/Bricks" unique_id=43956584]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(2, 272, 78, 272, 78, 298, 2, 298)
+
+[node name="Brick128" type="Polygon2D" parent="Background/Bricks" unique_id=1258144085]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(82, 272, 158, 272, 158, 298, 82, 298)
+
+[node name="Brick129" type="Polygon2D" parent="Background/Bricks" unique_id=481710255]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(162, 272, 238, 272, 238, 298, 162, 298)
+
+[node name="Brick130" type="Polygon2D" parent="Background/Bricks" unique_id=1891447864]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(242, 272, 318, 272, 318, 298, 242, 298)
+
+[node name="Brick131" type="Polygon2D" parent="Background/Bricks" unique_id=2140693612]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(322, 272, 398, 272, 398, 298, 322, 298)
+
+[node name="Brick132" type="Polygon2D" parent="Background/Bricks" unique_id=1878853315]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(402, 272, 478, 272, 478, 298, 402, 298)
+
+[node name="Brick133" type="Polygon2D" parent="Background/Bricks" unique_id=1022768645]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(482, 272, 558, 272, 558, 298, 482, 298)
+
+[node name="Brick134" type="Polygon2D" parent="Background/Bricks" unique_id=2063890437]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(562, 272, 638, 272, 638, 298, 562, 298)
+
+[node name="Brick135" type="Polygon2D" parent="Background/Bricks" unique_id=555422904]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(642, 272, 718, 272, 718, 298, 642, 298)
+
+[node name="Brick136" type="Polygon2D" parent="Background/Bricks" unique_id=981508764]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(722, 272, 798, 272, 798, 298, 722, 298)
+
+[node name="Brick137" type="Polygon2D" parent="Background/Bricks" unique_id=43161545]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(802, 272, 878, 272, 878, 298, 802, 298)
+
+[node name="Brick138" type="Polygon2D" parent="Background/Bricks" unique_id=1661714519]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(882, 272, 958, 272, 958, 298, 882, 298)
+
+[node name="Brick139" type="Polygon2D" parent="Background/Bricks" unique_id=414418680]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(962, 272, 1038, 272, 1038, 298, 962, 298)
+
+[node name="Brick140" type="Polygon2D" parent="Background/Bricks" unique_id=137715258]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(1042, 272, 1118, 272, 1118, 298, 1042, 298)
+
+[node name="Brick141" type="Polygon2D" parent="Background/Bricks" unique_id=1121881787]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(-38, 302, 38, 302, 38, 328, -38, 328)
+
+[node name="Brick142" type="Polygon2D" parent="Background/Bricks" unique_id=346825581]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(42, 302, 118, 302, 118, 328, 42, 328)
+
+[node name="Brick143" type="Polygon2D" parent="Background/Bricks" unique_id=343105402]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(122, 302, 198, 302, 198, 328, 122, 328)
+
+[node name="Brick144" type="Polygon2D" parent="Background/Bricks" unique_id=352085229]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(202, 302, 278, 302, 278, 328, 202, 328)
+
+[node name="Brick145" type="Polygon2D" parent="Background/Bricks" unique_id=927794672]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(282, 302, 358, 302, 358, 328, 282, 328)
+
+[node name="Brick146" type="Polygon2D" parent="Background/Bricks" unique_id=2092716877]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(362, 302, 438, 302, 438, 328, 362, 328)
+
+[node name="Brick147" type="Polygon2D" parent="Background/Bricks" unique_id=483109260]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(442, 302, 518, 302, 518, 328, 442, 328)
+
+[node name="Brick148" type="Polygon2D" parent="Background/Bricks" unique_id=438121326]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(522, 302, 598, 302, 598, 328, 522, 328)
+
+[node name="Brick149" type="Polygon2D" parent="Background/Bricks" unique_id=342212468]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(602, 302, 678, 302, 678, 328, 602, 328)
+
+[node name="Brick150" type="Polygon2D" parent="Background/Bricks" unique_id=2017585300]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(682, 302, 758, 302, 758, 328, 682, 328)
+
+[node name="Brick151" type="Polygon2D" parent="Background/Bricks" unique_id=1738337273]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(762, 302, 838, 302, 838, 328, 762, 328)
+
+[node name="Brick152" type="Polygon2D" parent="Background/Bricks" unique_id=1652016049]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(842, 302, 918, 302, 918, 328, 842, 328)
+
+[node name="Brick153" type="Polygon2D" parent="Background/Bricks" unique_id=1639637867]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(922, 302, 998, 302, 998, 328, 922, 328)
+
+[node name="Brick154" type="Polygon2D" parent="Background/Bricks" unique_id=1119718119]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(1002, 302, 1078, 302, 1078, 328, 1002, 328)
+
+[node name="Brick155" type="Polygon2D" parent="Background/Bricks" unique_id=1295412469]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(2, 332, 78, 332, 78, 358, 2, 358)
+
+[node name="Brick156" type="Polygon2D" parent="Background/Bricks" unique_id=1932508083]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(82, 332, 158, 332, 158, 358, 82, 358)
+
+[node name="Brick157" type="Polygon2D" parent="Background/Bricks" unique_id=396023721]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(162, 332, 238, 332, 238, 358, 162, 358)
+
+[node name="Brick158" type="Polygon2D" parent="Background/Bricks" unique_id=1296298432]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(242, 332, 318, 332, 318, 358, 242, 358)
+
+[node name="Brick159" type="Polygon2D" parent="Background/Bricks" unique_id=1160431382]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(322, 332, 398, 332, 398, 358, 322, 358)
+
+[node name="Brick160" type="Polygon2D" parent="Background/Bricks" unique_id=1176396413]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(402, 332, 478, 332, 478, 358, 402, 358)
+
+[node name="Brick161" type="Polygon2D" parent="Background/Bricks" unique_id=848939362]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(482, 332, 558, 332, 558, 358, 482, 358)
+
+[node name="Brick162" type="Polygon2D" parent="Background/Bricks" unique_id=781010878]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(562, 332, 638, 332, 638, 358, 562, 358)
+
+[node name="Brick163" type="Polygon2D" parent="Background/Bricks" unique_id=342775514]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(642, 332, 718, 332, 718, 358, 642, 358)
+
+[node name="Brick164" type="Polygon2D" parent="Background/Bricks" unique_id=1444020221]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(722, 332, 798, 332, 798, 358, 722, 358)
+
+[node name="Brick165" type="Polygon2D" parent="Background/Bricks" unique_id=114155197]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(802, 332, 878, 332, 878, 358, 802, 358)
+
+[node name="Brick166" type="Polygon2D" parent="Background/Bricks" unique_id=1096823342]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(882, 332, 958, 332, 958, 358, 882, 358)
+
+[node name="Brick167" type="Polygon2D" parent="Background/Bricks" unique_id=856066227]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(962, 332, 1038, 332, 1038, 358, 962, 358)
+
+[node name="Brick168" type="Polygon2D" parent="Background/Bricks" unique_id=1048087919]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(1042, 332, 1118, 332, 1118, 358, 1042, 358)
+
+[node name="Brick169" type="Polygon2D" parent="Background/Bricks" unique_id=1180827857]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(-38, 362, 38, 362, 38, 388, -38, 388)
+
+[node name="Brick170" type="Polygon2D" parent="Background/Bricks" unique_id=505122953]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(42, 362, 118, 362, 118, 388, 42, 388)
+
+[node name="Brick171" type="Polygon2D" parent="Background/Bricks" unique_id=1148749589]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(122, 362, 198, 362, 198, 388, 122, 388)
+
+[node name="Brick172" type="Polygon2D" parent="Background/Bricks" unique_id=2053279211]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(202, 362, 278, 362, 278, 388, 202, 388)
+
+[node name="Brick173" type="Polygon2D" parent="Background/Bricks" unique_id=1678294999]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(282, 362, 358, 362, 358, 388, 282, 388)
+
+[node name="Brick174" type="Polygon2D" parent="Background/Bricks" unique_id=297231953]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(362, 362, 438, 362, 438, 388, 362, 388)
+
+[node name="Brick175" type="Polygon2D" parent="Background/Bricks" unique_id=804849737]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(442, 362, 518, 362, 518, 388, 442, 388)
+
+[node name="Brick176" type="Polygon2D" parent="Background/Bricks" unique_id=1859934901]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(522, 362, 598, 362, 598, 388, 522, 388)
+
+[node name="Brick177" type="Polygon2D" parent="Background/Bricks" unique_id=1435544513]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(602, 362, 678, 362, 678, 388, 602, 388)
+
+[node name="Brick178" type="Polygon2D" parent="Background/Bricks" unique_id=127126995]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(682, 362, 758, 362, 758, 388, 682, 388)
+
+[node name="Brick179" type="Polygon2D" parent="Background/Bricks" unique_id=680978040]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(762, 362, 838, 362, 838, 388, 762, 388)
+
+[node name="Brick180" type="Polygon2D" parent="Background/Bricks" unique_id=518446295]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(842, 362, 918, 362, 918, 388, 842, 388)
+
+[node name="Brick181" type="Polygon2D" parent="Background/Bricks" unique_id=2082328126]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(922, 362, 998, 362, 998, 388, 922, 388)
+
+[node name="Brick182" type="Polygon2D" parent="Background/Bricks" unique_id=1702437789]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(1002, 362, 1078, 362, 1078, 388, 1002, 388)
+
+[node name="Brick183" type="Polygon2D" parent="Background/Bricks" unique_id=804112322]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(2, 392, 78, 392, 78, 418, 2, 418)
+
+[node name="Brick184" type="Polygon2D" parent="Background/Bricks" unique_id=1415956962]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(82, 392, 158, 392, 158, 418, 82, 418)
+
+[node name="Brick185" type="Polygon2D" parent="Background/Bricks" unique_id=888106905]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(162, 392, 238, 392, 238, 418, 162, 418)
+
+[node name="Brick186" type="Polygon2D" parent="Background/Bricks" unique_id=2075041387]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(242, 392, 318, 392, 318, 418, 242, 418)
+
+[node name="Brick187" type="Polygon2D" parent="Background/Bricks" unique_id=2087726060]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(322, 392, 398, 392, 398, 418, 322, 418)
+
+[node name="Brick188" type="Polygon2D" parent="Background/Bricks" unique_id=1884433653]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(402, 392, 478, 392, 478, 418, 402, 418)
+
+[node name="Brick189" type="Polygon2D" parent="Background/Bricks" unique_id=698378249]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(482, 392, 558, 392, 558, 418, 482, 418)
+
+[node name="Brick190" type="Polygon2D" parent="Background/Bricks" unique_id=1773009800]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(562, 392, 638, 392, 638, 418, 562, 418)
+
+[node name="Brick191" type="Polygon2D" parent="Background/Bricks" unique_id=1854042244]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(642, 392, 718, 392, 718, 418, 642, 418)
+
+[node name="Brick192" type="Polygon2D" parent="Background/Bricks" unique_id=1315222000]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(722, 392, 798, 392, 798, 418, 722, 418)
+
+[node name="Brick193" type="Polygon2D" parent="Background/Bricks" unique_id=1477929322]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(802, 392, 878, 392, 878, 418, 802, 418)
+
+[node name="Brick194" type="Polygon2D" parent="Background/Bricks" unique_id=1353394892]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(882, 392, 958, 392, 958, 418, 882, 418)
+
+[node name="Brick195" type="Polygon2D" parent="Background/Bricks" unique_id=1183955844]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(962, 392, 1038, 392, 1038, 418, 962, 418)
+
+[node name="Brick196" type="Polygon2D" parent="Background/Bricks" unique_id=1875435601]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(1042, 392, 1118, 392, 1118, 418, 1042, 418)
+
+[node name="Brick197" type="Polygon2D" parent="Background/Bricks" unique_id=1942981076]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(-38, 422, 38, 422, 38, 448, -38, 448)
+
+[node name="Brick198" type="Polygon2D" parent="Background/Bricks" unique_id=282049409]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(42, 422, 118, 422, 118, 448, 42, 448)
+
+[node name="Brick199" type="Polygon2D" parent="Background/Bricks" unique_id=1690937626]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(122, 422, 198, 422, 198, 448, 122, 448)
+
+[node name="Brick200" type="Polygon2D" parent="Background/Bricks" unique_id=1588591753]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(202, 422, 278, 422, 278, 448, 202, 448)
+
+[node name="Brick201" type="Polygon2D" parent="Background/Bricks" unique_id=1807771085]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(282, 422, 358, 422, 358, 448, 282, 448)
+
+[node name="Brick202" type="Polygon2D" parent="Background/Bricks" unique_id=202642453]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(362, 422, 438, 422, 438, 448, 362, 448)
+
+[node name="Brick203" type="Polygon2D" parent="Background/Bricks" unique_id=2011393891]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(442, 422, 518, 422, 518, 448, 442, 448)
+
+[node name="Brick204" type="Polygon2D" parent="Background/Bricks" unique_id=1717490328]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(522, 422, 598, 422, 598, 448, 522, 448)
+
+[node name="Brick205" type="Polygon2D" parent="Background/Bricks" unique_id=1477739147]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(602, 422, 678, 422, 678, 448, 602, 448)
+
+[node name="Brick206" type="Polygon2D" parent="Background/Bricks" unique_id=49689295]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(682, 422, 758, 422, 758, 448, 682, 448)
+
+[node name="Brick207" type="Polygon2D" parent="Background/Bricks" unique_id=387846184]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(762, 422, 838, 422, 838, 448, 762, 448)
+
+[node name="Brick208" type="Polygon2D" parent="Background/Bricks" unique_id=883013291]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(842, 422, 918, 422, 918, 448, 842, 448)
+
+[node name="Brick209" type="Polygon2D" parent="Background/Bricks" unique_id=427372073]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(922, 422, 998, 422, 998, 448, 922, 448)
+
+[node name="Brick210" type="Polygon2D" parent="Background/Bricks" unique_id=93952862]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(1002, 422, 1078, 422, 1078, 448, 1002, 448)
+
+[node name="Brick211" type="Polygon2D" parent="Background/Bricks" unique_id=485047725]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(2, 452, 78, 452, 78, 478, 2, 478)
+
+[node name="Brick212" type="Polygon2D" parent="Background/Bricks" unique_id=1285519245]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(82, 452, 158, 452, 158, 478, 82, 478)
+
+[node name="Brick213" type="Polygon2D" parent="Background/Bricks" unique_id=1883417048]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(162, 452, 238, 452, 238, 478, 162, 478)
+
+[node name="Brick214" type="Polygon2D" parent="Background/Bricks" unique_id=1388778175]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(242, 452, 318, 452, 318, 478, 242, 478)
+
+[node name="Brick215" type="Polygon2D" parent="Background/Bricks" unique_id=1726480341]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(322, 452, 398, 452, 398, 478, 322, 478)
+
+[node name="Brick216" type="Polygon2D" parent="Background/Bricks" unique_id=672275628]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(402, 452, 478, 452, 478, 478, 402, 478)
+
+[node name="Brick217" type="Polygon2D" parent="Background/Bricks" unique_id=622089116]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(482, 452, 558, 452, 558, 478, 482, 478)
+
+[node name="Brick218" type="Polygon2D" parent="Background/Bricks" unique_id=1124392907]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(562, 452, 638, 452, 638, 478, 562, 478)
+
+[node name="Brick219" type="Polygon2D" parent="Background/Bricks" unique_id=512165698]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(642, 452, 718, 452, 718, 478, 642, 478)
+
+[node name="Brick220" type="Polygon2D" parent="Background/Bricks" unique_id=681540325]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(722, 452, 798, 452, 798, 478, 722, 478)
+
+[node name="Brick221" type="Polygon2D" parent="Background/Bricks" unique_id=1046258769]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(802, 452, 878, 452, 878, 478, 802, 478)
+
+[node name="Brick222" type="Polygon2D" parent="Background/Bricks" unique_id=50912493]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(882, 452, 958, 452, 958, 478, 882, 478)
+
+[node name="Brick223" type="Polygon2D" parent="Background/Bricks" unique_id=767814783]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(962, 452, 1038, 452, 1038, 478, 962, 478)
+
+[node name="Brick224" type="Polygon2D" parent="Background/Bricks" unique_id=1255434398]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(1042, 452, 1118, 452, 1118, 478, 1042, 478)
+
+[node name="Brick225" type="Polygon2D" parent="Background/Bricks" unique_id=592524674]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(-38, 482, 38, 482, 38, 508, -38, 508)
+
+[node name="Brick226" type="Polygon2D" parent="Background/Bricks" unique_id=353997554]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(42, 482, 118, 482, 118, 508, 42, 508)
+
+[node name="Brick227" type="Polygon2D" parent="Background/Bricks" unique_id=2054526785]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(122, 482, 198, 482, 198, 508, 122, 508)
+
+[node name="Brick228" type="Polygon2D" parent="Background/Bricks" unique_id=138457652]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(202, 482, 278, 482, 278, 508, 202, 508)
+
+[node name="Brick229" type="Polygon2D" parent="Background/Bricks" unique_id=1822318768]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(282, 482, 358, 482, 358, 508, 282, 508)
+
+[node name="Brick230" type="Polygon2D" parent="Background/Bricks" unique_id=1358719431]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(362, 482, 438, 482, 438, 508, 362, 508)
+
+[node name="Brick231" type="Polygon2D" parent="Background/Bricks" unique_id=1378342989]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(442, 482, 518, 482, 518, 508, 442, 508)
+
+[node name="Brick232" type="Polygon2D" parent="Background/Bricks" unique_id=1195220019]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(522, 482, 598, 482, 598, 508, 522, 508)
+
+[node name="Brick233" type="Polygon2D" parent="Background/Bricks" unique_id=1592703198]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(602, 482, 678, 482, 678, 508, 602, 508)
+
+[node name="Brick234" type="Polygon2D" parent="Background/Bricks" unique_id=1657712930]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(682, 482, 758, 482, 758, 508, 682, 508)
+
+[node name="Brick235" type="Polygon2D" parent="Background/Bricks" unique_id=646430385]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(762, 482, 838, 482, 838, 508, 762, 508)
+
+[node name="Brick236" type="Polygon2D" parent="Background/Bricks" unique_id=867478246]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(842, 482, 918, 482, 918, 508, 842, 508)
+
+[node name="Brick237" type="Polygon2D" parent="Background/Bricks" unique_id=77443096]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(922, 482, 998, 482, 998, 508, 922, 508)
+
+[node name="Brick238" type="Polygon2D" parent="Background/Bricks" unique_id=957710466]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(1002, 482, 1078, 482, 1078, 508, 1002, 508)
+
+[node name="Brick239" type="Polygon2D" parent="Background/Bricks" unique_id=509583259]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(2, 512, 78, 512, 78, 538, 2, 538)
+
+[node name="Brick240" type="Polygon2D" parent="Background/Bricks" unique_id=494375857]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(82, 512, 158, 512, 158, 538, 82, 538)
+
+[node name="Brick241" type="Polygon2D" parent="Background/Bricks" unique_id=1588481083]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(162, 512, 238, 512, 238, 538, 162, 538)
+
+[node name="Brick242" type="Polygon2D" parent="Background/Bricks" unique_id=240893736]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(242, 512, 318, 512, 318, 538, 242, 538)
+
+[node name="Brick243" type="Polygon2D" parent="Background/Bricks" unique_id=2028502646]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(322, 512, 398, 512, 398, 538, 322, 538)
+
+[node name="Brick244" type="Polygon2D" parent="Background/Bricks" unique_id=2061118647]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(402, 512, 478, 512, 478, 538, 402, 538)
+
+[node name="Brick245" type="Polygon2D" parent="Background/Bricks" unique_id=1521638897]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(482, 512, 558, 512, 558, 538, 482, 538)
+
+[node name="Brick246" type="Polygon2D" parent="Background/Bricks" unique_id=1547726153]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(562, 512, 638, 512, 638, 538, 562, 538)
+
+[node name="Brick247" type="Polygon2D" parent="Background/Bricks" unique_id=318282043]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(642, 512, 718, 512, 718, 538, 642, 538)
+
+[node name="Brick248" type="Polygon2D" parent="Background/Bricks" unique_id=499873133]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(722, 512, 798, 512, 798, 538, 722, 538)
+
+[node name="Brick249" type="Polygon2D" parent="Background/Bricks" unique_id=1036010869]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(802, 512, 878, 512, 878, 538, 802, 538)
+
+[node name="Brick250" type="Polygon2D" parent="Background/Bricks" unique_id=98296608]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(882, 512, 958, 512, 958, 538, 882, 538)
+
+[node name="Brick251" type="Polygon2D" parent="Background/Bricks" unique_id=1207580692]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(962, 512, 1038, 512, 1038, 538, 962, 538)
+
+[node name="Brick252" type="Polygon2D" parent="Background/Bricks" unique_id=2114532219]
+color = Color(0.33333334, 0.33333334, 0.41568628, 1)
+polygon = PackedVector2Array(1042, 512, 1118, 512, 1118, 538, 1042, 538)
+
+[node name="Buildings" type="Node2D" parent="." unique_id=2109267670]
+
+[node name="Pillar" type="Node2D" parent="Buildings" unique_id=272193862]
+position = Vector2(260, 440)
+
+[node name="Shaft" type="Polygon2D" parent="Buildings/Pillar" unique_id=1725496844]
+color = Color(0.42745098, 0.42745098, 0.5019608, 1)
+polygon = PackedVector2Array(-22, -380, 22, -380, 22, 0, -22, 0)
+
+[node name="Capital" type="Polygon2D" parent="Buildings/Pillar" unique_id=745703]
+color = Color(0.49803922, 0.49803922, 0.5803922, 1)
+polygon = PackedVector2Array(-32, -390, 32, -390, 32, -372, -32, -372)
+
+[node name="ArchWindow" type="Node2D" parent="Buildings" unique_id=262499317]
+position = Vector2(380, 165)
+
+[node name="Glass" type="Polygon2D" parent="Buildings/ArchWindow" unique_id=692281222]
+color = Color(0.11372549, 0.13725491, 0.2509804, 1)
+polygon = PackedVector2Array(-30, -55, 30, -55, 30, 55, -30, 55)
+
+[node name="Arch" type="Polygon2D" parent="Buildings/ArchWindow" unique_id=271672617]
+color = Color(0.11372549, 0.13725491, 0.2509804, 1)
+polygon = PackedVector2Array(30, -55, 28.977783, -47.235428, 25.980774, -40, 21.213196, -33.786804, 15, -29.019241, 7.764557, -26.022232, 0, -25, -7.764557, -26.022232, -15, -29.019241, -21.213196, -33.786804, -25.980774, -40, -28.977783, -47.235428, -30, -55, -28.977783, -62.764572, -25.980774, -70, -21.213196, -76.2132, -15, -80.98076, -7.764557, -83.977776, 0, -85, 7.764557, -83.977776, 15, -80.98076, 21.213196, -76.2132, 25.980774, -70, 28.977783, -62.764572)
+
+[node name="Star" type="Polygon2D" parent="Buildings/ArchWindow" unique_id=134459042]
+polygon = PackedVector2Array(-9, -15, -9.102234, -14.223541, -9.4019165, -13.5, -9.878693, -12.878677, -10.5, -12.4019165, -11.223541, -12.102219, -12, -12, -12.776459, -12.102219, -13.5, -12.4019165, -14.121307, -12.878677, -14.5980835, -13.5, -14.897766, -14.223541, -15, -15, -14.897766, -15.776459, -14.5980835, -16.5, -14.121307, -17.121323, -13.5, -17.598083, -12.776459, -17.897781, -12, -18, -11.223541, -17.897781, -10.5, -17.598083, -9.878693, -17.121323, -9.4019165, -16.5, -9.102234, -15.776459)
+
+[node name="Pillar2" type="Node2D" parent="Buildings" unique_id=140212723]
+position = Vector2(500, 440)
+
+[node name="Shaft" type="Polygon2D" parent="Buildings/Pillar2" unique_id=1868257970]
+color = Color(0.42745098, 0.42745098, 0.5019608, 1)
+polygon = PackedVector2Array(-22, -380, 22, -380, 22, 0, -22, 0)
+
+[node name="Capital" type="Polygon2D" parent="Buildings/Pillar2" unique_id=482969882]
+color = Color(0.49803922, 0.49803922, 0.5803922, 1)
+polygon = PackedVector2Array(-32, -390, 32, -390, 32, -372, -32, -372)
+
+[node name="ArchWindow2" type="Node2D" parent="Buildings" unique_id=1004956003]
+position = Vector2(620, 165)
+
+[node name="Glass" type="Polygon2D" parent="Buildings/ArchWindow2" unique_id=1746469585]
+color = Color(0.11372549, 0.13725491, 0.2509804, 1)
+polygon = PackedVector2Array(-30, -55, 30, -55, 30, 55, -30, 55)
+
+[node name="Arch" type="Polygon2D" parent="Buildings/ArchWindow2" unique_id=708701159]
+color = Color(0.11372549, 0.13725491, 0.2509804, 1)
+polygon = PackedVector2Array(30, -55, 28.977783, -47.235428, 25.980774, -40, 21.213196, -33.786804, 15, -29.019241, 7.7645874, -26.022232, 0, -25, -7.7645874, -26.022232, -15, -29.019241, -21.213196, -33.786804, -25.980774, -40, -28.977783, -47.235428, -30, -55, -28.977783, -62.764572, -25.980774, -70, -21.213196, -76.2132, -15, -80.98076, -7.7645874, -83.977776, 0, -85, 7.7645874, -83.977776, 15, -80.98076, 21.213196, -76.2132, 25.980774, -70, 28.977783, -62.764572)
+
+[node name="Star" type="Polygon2D" parent="Buildings/ArchWindow2" unique_id=1767642207]
+polygon = PackedVector2Array(-9, -15, -9.102234, -14.223541, -9.4019165, -13.5, -9.878662, -12.878677, -10.5, -12.4019165, -11.223572, -12.102219, -12, -12, -12.776428, -12.102219, -13.5, -12.4019165, -14.121338, -12.878677, -14.5980835, -13.5, -14.897766, -14.223541, -15, -15, -14.897766, -15.776459, -14.5980835, -16.5, -14.121338, -17.121323, -13.5, -17.598083, -12.776428, -17.897781, -12, -18, -11.223572, -17.897781, -10.5, -17.598083, -9.878662, -17.121323, -9.4019165, -16.5, -9.102234, -15.776459)
+
+[node name="Pillar3" type="Node2D" parent="Buildings" unique_id=1395513936]
+position = Vector2(740, 440)
+
+[node name="Shaft" type="Polygon2D" parent="Buildings/Pillar3" unique_id=303282144]
+color = Color(0.42745098, 0.42745098, 0.5019608, 1)
+polygon = PackedVector2Array(-22, -380, 22, -380, 22, 0, -22, 0)
+
+[node name="Capital" type="Polygon2D" parent="Buildings/Pillar3" unique_id=899513539]
+color = Color(0.49803922, 0.49803922, 0.5803922, 1)
+polygon = PackedVector2Array(-32, -390, 32, -390, 32, -372, -32, -372)
+
+[node name="ExitDoor" type="Node2D" parent="Buildings" unique_id=341544952]
+position = Vector2(80, 440)
+script = ExtResource("2_weq4w")
+kind = "door"
+verb = "Enter"
+prompt_height = 92.0
+target_area = "town"
+target_door = "TowerDoor"
+
+[node name="Frame" type="Polygon2D" parent="Buildings/ExitDoor" unique_id=2089140801]
+color = Color(0.18862745, 0.122352935, 0.08156863, 1)
+polygon = PackedVector2Array(-28, -92, 28, -92, 28, 0, -28, 0)
+
+[node name="Panel" type="Polygon2D" parent="Buildings/ExitDoor" unique_id=697363274]
+color = Color(0.2901961, 0.1882353, 0.1254902, 1)
+polygon = PackedVector2Array(-23, -87, 23, -87, 23, 0, -23, 0)
+
+[node name="Knob" type="Polygon2D" parent="Buildings/ExitDoor" unique_id=916683649]
+color = Color(0.9098039, 0.77254903, 0.2784314, 1)
+polygon = PackedVector2Array(16.5, -42, 16.380737, -41.094147, 16.03109, -40.25, 15.474876, -39.525116, 14.75, -38.968903, 13.905869, -38.619263, 13, -38.5, 12.094131, -38.619263, 11.25, -38.968903, 10.525124, -39.525116, 9.96891, -40.25, 9.619263, -41.094147, 9.5, -42, 9.619263, -42.905853, 9.96891, -43.75, 10.525124, -44.474884, 11.25, -45.031097, 12.094131, -45.380737, 13, -45.5, 13.905869, -45.380737, 14.75, -45.031097, 15.474876, -44.474884, 16.03109, -43.75, 16.380737, -42.905853)
+
+[node name="Decor" type="Node2D" parent="." unique_id=1455883633]
+
+[node name="Torch" type="Node2D" parent="Decor" unique_id=1962871973]
+position = Vector2(260, 220)
+
+[node name="Stick" type="Polygon2D" parent="Decor/Torch" unique_id=159639023]
+color = Color(0.3529412, 0.22745098, 0.13333334, 1)
+polygon = PackedVector2Array(-4, 0, 4, 0, 4, 34, -4, 34)
+
+[node name="Flame" type="Polygon2D" parent="Decor/Torch" unique_id=289370153]
+color = Color(0.9411765, 0.5411765, 0.14117648, 1)
+polygon = PackedVector2Array(12, -8, 11.5911255, -4.894165, 10.392303, -2, 8.485291, 0.48527527, 6, 2.3923035, 3.105835, 3.5911102, 0, 4, -3.105835, 3.5911102, -6, 2.3923035, -8.485275, 0.48527527, -10.392303, -2, -11.59111, -4.894165, -12, -8, -11.59111, -11.105835, -10.392303, -14, -8.485275, -16.485275, -6, -18.392303, -3.105835, -19.59111, 0, -20, 3.105835, -19.59111, 6, -18.392303, 8.485291, -16.485275, 10.392303, -14, 11.5911255, -11.105835)
+
+[node name="FlameCore" type="Polygon2D" parent="Decor/Torch" unique_id=656270592]
+color = Color(1, 0.827451, 0.3019608, 1)
+polygon = PackedVector2Array(6, -5, 5.7955627, -3.4470825, 5.196167, -2, 4.2426453, -0.75735474, 3, 0.19615173, 1.5529175, 0.79556274, 0, 1, -1.5529175, 0.79556274, -3, 0.19615173, -4.2426453, -0.75735474, -5.1961517, -2, -5.7955627, -3.4470825, -6, -5, -5.7955627, -6.5529175, -5.1961517, -8, -4.2426453, -9.242645, -3, -10.196152, -1.5529175, -10.795563, 0, -11, 1.5529175, -10.795563, 3, -10.196152, 4.2426453, -9.242645, 5.196167, -8, 5.7955627, -6.5529175)
+
+[node name="Torch2" type="Node2D" parent="Decor" unique_id=1263258279]
+position = Vector2(500, 220)
+
+[node name="Stick" type="Polygon2D" parent="Decor/Torch2" unique_id=1916776851]
+color = Color(0.3529412, 0.22745098, 0.13333334, 1)
+polygon = PackedVector2Array(-4, 0, 4, 0, 4, 34, -4, 34)
+
+[node name="Flame" type="Polygon2D" parent="Decor/Torch2" unique_id=1496079125]
+color = Color(0.9411765, 0.5411765, 0.14117648, 1)
+polygon = PackedVector2Array(12, -8, 11.5911255, -4.894165, 10.392303, -2, 8.485291, 0.48527527, 6, 2.3923035, 3.105835, 3.5911102, 0, 4, -3.105835, 3.5911102, -6, 2.3923035, -8.485291, 0.48527527, -10.392303, -2, -11.5911255, -4.894165, -12, -8, -11.5911255, -11.105835, -10.392303, -14, -8.485291, -16.485275, -6, -18.392303, -3.105835, -19.59111, 0, -20, 3.105835, -19.59111, 6, -18.392303, 8.485291, -16.485275, 10.392303, -14, 11.5911255, -11.105835)
+
+[node name="FlameCore" type="Polygon2D" parent="Decor/Torch2" unique_id=1741565433]
+color = Color(1, 0.827451, 0.3019608, 1)
+polygon = PackedVector2Array(6, -5, 5.7955627, -3.4470825, 5.196167, -2, 4.2426453, -0.75735474, 3, 0.19615173, 1.5529175, 0.79556274, 0, 1, -1.5529175, 0.79556274, -3, 0.19615173, -4.2426453, -0.75735474, -5.196167, -2, -5.7955627, -3.4470825, -6, -5, -5.7955627, -6.5529175, -5.196167, -8, -4.2426453, -9.242645, -3, -10.196152, -1.5529175, -10.795563, 0, -11, 1.5529175, -10.795563, 3, -10.196152, 4.2426453, -9.242645, 5.196167, -8, 5.7955627, -6.5529175)
+
+[node name="Torch3" type="Node2D" parent="Decor" unique_id=735819486]
+position = Vector2(740, 220)
+
+[node name="Stick" type="Polygon2D" parent="Decor/Torch3" unique_id=478389944]
+color = Color(0.3529412, 0.22745098, 0.13333334, 1)
+polygon = PackedVector2Array(-4, 0, 4, 0, 4, 34, -4, 34)
+
+[node name="Flame" type="Polygon2D" parent="Decor/Torch3" unique_id=855708303]
+color = Color(0.9411765, 0.5411765, 0.14117648, 1)
+polygon = PackedVector2Array(12, -8, 11.5911255, -4.894165, 10.392334, -2, 8.485291, 0.48527527, 6, 2.3923035, 3.105835, 3.5911102, 0, 4, -3.105835, 3.5911102, -6, 2.3923035, -8.485291, 0.48527527, -10.392334, -2, -11.5911255, -4.894165, -12, -8, -11.5911255, -11.105835, -10.392334, -14, -8.485291, -16.485275, -6, -18.392303, -3.105835, -19.59111, 0, -20, 3.105835, -19.59111, 6, -18.392303, 8.485291, -16.485275, 10.392334, -14, 11.5911255, -11.105835)
+
+[node name="FlameCore" type="Polygon2D" parent="Decor/Torch3" unique_id=1834475813]
+color = Color(1, 0.827451, 0.3019608, 1)
+polygon = PackedVector2Array(6, -5, 5.795532, -3.4470825, 5.196167, -2, 4.2426147, -0.75735474, 3, 0.19615173, 1.5529175, 0.79556274, 0, 1, -1.5529175, 0.79556274, -3, 0.19615173, -4.2426147, -0.75735474, -5.196167, -2, -5.795532, -3.4470825, -6, -5, -5.795532, -6.5529175, -5.196167, -8, -4.2426147, -9.242645, -3, -10.196152, -1.5529175, -10.795563, 0, -11, 1.5529175, -10.795563, 3, -10.196152, 4.2426147, -9.242645, 5.196167, -8, 5.795532, -6.5529175)
+
+[node name="Pedestal" type="Node2D" parent="Decor" unique_id=67401960]
+position = Vector2(860, 440)
+
+[node name="Stone" type="Polygon2D" parent="Decor/Pedestal" unique_id=1109935655]
+color = Color(0.43137255, 0.43137255, 0.47843137, 1)
+polygon = PackedVector2Array(-60, -30, 60, -30, 60, 0, -60, 0)
+
+[node name="Chest" type="Node2D" parent="Decor/Pedestal" unique_id=364967411]
+position = Vector2(0, -30)
+script = ExtResource("2_weq4w")
+kind = "chest"
+verb = "Open"
+prompt_height = 80.0
+
+[node name="Box" type="Polygon2D" parent="Decor/Pedestal/Chest" unique_id=1863941135]
+color = Color(0.54509807, 0.3529412, 0.16862746, 1)
+polygon = PackedVector2Array(-40, -50, 40, -50, 40, 0, -40, 0)
+
+[node name="Lid" type="Polygon2D" parent="Decor/Pedestal/Chest" unique_id=325093818]
+color = Color(0.627451, 0.32156864, 0.1764706, 1)
+polygon = PackedVector2Array(-44, -70, 44, -70, 44, -48, -44, -48)
+
+[node name="Lock" type="Polygon2D" parent="Decor/Pedestal/Chest" unique_id=2106961256]
+color = Color(0.9098039, 0.77254903, 0.2784314, 1)
+polygon = PackedVector2Array(-6, -54, 6, -54, 6, -40, -6, -40)
+
+[node name="Gem" type="Node2D" parent="Decor/Pedestal/Chest" unique_id=1497939118]
+visible = false
+position = Vector2(0, -110)
+
+[node name="Outer" type="Polygon2D" parent="Decor/Pedestal/Chest/Gem" unique_id=2005827569]
+color = Color(0.49803922, 0.8901961, 1, 1)
+polygon = PackedVector2Array(0, -22, 18, 0, 0, 22, -18, 0)
+
+[node name="Inner" type="Polygon2D" parent="Decor/Pedestal/Chest/Gem" unique_id=1125795661]
+color = Color(0.9098039, 0.9843137, 1, 1)
+polygon = PackedVector2Array(0, -12, 8, 0, 0, 12, -8, 0)
+
+[node name="Floor" type="Node2D" parent="." unique_id=1285642937]
+
+[node name="Ground" type="Polygon2D" parent="Floor" unique_id=448633097]
+color = Color(0.36862746, 0.36862746, 0.43137255, 1)
+polygon = PackedVector2Array(0, 440, 1000, 440, 1000, 540, 0, 540)
+
+[node name="Stones" type="Node2D" parent="Floor" unique_id=1321352189]
+position = Vector2(0, 440)
+
+[node name="Stone" type="Polygon2D" parent="Floor/Stones" unique_id=150401519]
+color = Color(0.3254902, 0.3254902, 0.41568628, 1)
+polygon = PackedVector2Array(3, 16, 61, 16, 61, 44, 3, 44)
+
+[node name="Stone2" type="Polygon2D" parent="Floor/Stones" unique_id=15127775]
+color = Color(0.3254902, 0.3254902, 0.41568628, 1)
+polygon = PackedVector2Array(67, 50, 125, 50, 125, 78, 67, 78)
+
+[node name="Stone3" type="Polygon2D" parent="Floor/Stones" unique_id=1411833261]
+color = Color(0.3254902, 0.3254902, 0.41568628, 1)
+polygon = PackedVector2Array(131, 16, 189, 16, 189, 44, 131, 44)
+
+[node name="Stone4" type="Polygon2D" parent="Floor/Stones" unique_id=1837992754]
+color = Color(0.3254902, 0.3254902, 0.41568628, 1)
+polygon = PackedVector2Array(195, 50, 253, 50, 253, 78, 195, 78)
+
+[node name="Stone5" type="Polygon2D" parent="Floor/Stones" unique_id=637017940]
+color = Color(0.3254902, 0.3254902, 0.41568628, 1)
+polygon = PackedVector2Array(259, 16, 317, 16, 317, 44, 259, 44)
+
+[node name="Stone6" type="Polygon2D" parent="Floor/Stones" unique_id=1867646085]
+color = Color(0.3254902, 0.3254902, 0.41568628, 1)
+polygon = PackedVector2Array(323, 50, 381, 50, 381, 78, 323, 78)
+
+[node name="Stone7" type="Polygon2D" parent="Floor/Stones" unique_id=1123175613]
+color = Color(0.3254902, 0.3254902, 0.41568628, 1)
+polygon = PackedVector2Array(387, 16, 445, 16, 445, 44, 387, 44)
+
+[node name="Stone8" type="Polygon2D" parent="Floor/Stones" unique_id=1022783946]
+color = Color(0.3254902, 0.3254902, 0.41568628, 1)
+polygon = PackedVector2Array(451, 50, 509, 50, 509, 78, 451, 78)
+
+[node name="Stone9" type="Polygon2D" parent="Floor/Stones" unique_id=1072208953]
+color = Color(0.3254902, 0.3254902, 0.41568628, 1)
+polygon = PackedVector2Array(515, 16, 573, 16, 573, 44, 515, 44)
+
+[node name="Stone10" type="Polygon2D" parent="Floor/Stones" unique_id=898270852]
+color = Color(0.3254902, 0.3254902, 0.41568628, 1)
+polygon = PackedVector2Array(579, 50, 637, 50, 637, 78, 579, 78)
+
+[node name="Stone11" type="Polygon2D" parent="Floor/Stones" unique_id=1453168213]
+color = Color(0.3254902, 0.3254902, 0.41568628, 1)
+polygon = PackedVector2Array(643, 16, 701, 16, 701, 44, 643, 44)
+
+[node name="Stone12" type="Polygon2D" parent="Floor/Stones" unique_id=676492911]
+color = Color(0.3254902, 0.3254902, 0.41568628, 1)
+polygon = PackedVector2Array(707, 50, 765, 50, 765, 78, 707, 78)
+
+[node name="Stone13" type="Polygon2D" parent="Floor/Stones" unique_id=17328488]
+color = Color(0.3254902, 0.3254902, 0.41568628, 1)
+polygon = PackedVector2Array(771, 16, 829, 16, 829, 44, 771, 44)
+
+[node name="Stone14" type="Polygon2D" parent="Floor/Stones" unique_id=986580561]
+color = Color(0.3254902, 0.3254902, 0.41568628, 1)
+polygon = PackedVector2Array(835, 50, 893, 50, 893, 78, 835, 78)
+
+[node name="Stone15" type="Polygon2D" parent="Floor/Stones" unique_id=633827149]
+color = Color(0.3254902, 0.3254902, 0.41568628, 1)
+polygon = PackedVector2Array(899, 16, 957, 16, 957, 44, 899, 44)
+
+[node name="Stone16" type="Polygon2D" parent="Floor/Stones" unique_id=1997374013]
+color = Color(0.3254902, 0.3254902, 0.41568628, 1)
+polygon = PackedVector2Array(963, 50, 1021, 50, 1021, 78, 963, 78)
+
+[node name="Edge" type="Polygon2D" parent="Floor" unique_id=522213300]
+color = Color(0.24313726, 0.24313726, 0.30588236, 1)
+polygon = PackedVector2Array(0, 440, 1000, 440, 1000, 448, 0, 448)
+
+[node name="Actors" type="Node2D" parent="." unique_id=975861833]
