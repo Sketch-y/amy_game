@@ -1,7 +1,7 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://bvhagcs0yrjgy"]
 
-[ext_resource type="Script" path="res://scripts/area.gd" id="1_3ikt3"]
-[ext_resource type="Script" path="res://scripts/interactable.gd" id="2_lt6fo"]
+[ext_resource type="Script" uid="uid://cgik3snd2w3i2" path="res://scripts/area.gd" id="1_3ikt3"]
+[ext_resource type="Script" uid="uid://c078pakaijfp5" path="res://scripts/interactable.gd" id="2_lt6fo"]
 
 [node name="Home" type="Node2D" unique_id=820213986]
 script = ExtResource("1_3ikt3")

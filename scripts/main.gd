@@ -2,7 +2,7 @@ extends Node2D
 ## Game root: loads area scenes (res://scenes/areas/*.tscn), and owns the
 ## player, camera, UI, area transitions, interactions and quest state.
 
-const PlayerScript := preload("res://scripts/player.gd")
+const PlayerScene := preload("res://scenes/player.tscn")
 const AREA_PATH := "res://scenes/areas/%s.tscn"
 
 const VIEW_W := 960.0
@@ -31,8 +31,7 @@ var flags := {}
 
 
 func _ready() -> void:
-	player = PlayerScript.new()
-	player.name = "Player"
+	player = PlayerScene.instantiate()
 	add_child(player)
 
 	prompt = Label.new()

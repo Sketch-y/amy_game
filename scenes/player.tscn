@@ -1,0 +1,42 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_3vyb7"]
+
+[node name="Player" type="Node2D" unique_id=1081741265]
+script = ExtResource("1_3vyb7")
+
+[node name="Visual" type="Node2D" parent="." unique_id=855454585]
+
+[node name="LegL" type="Polygon2D" parent="Visual" unique_id=1541086396]
+color = Color(0.23921569, 0.2901961, 0.47843137, 1)
+polygon = PackedVector2Array(-11, -34, -2, -34, -2, 0, -11, 0)
+
+[node name="LegR" type="Polygon2D" parent="Visual" unique_id=1564172917]
+color = Color(0.23921569, 0.2901961, 0.47843137, 1)
+polygon = PackedVector2Array(2, -34, 11, -34, 11, 0, 2, 0)
+
+[node name="Upper" type="Node2D" parent="Visual" unique_id=546023897]
+
+[node name="Body" type="Polygon2D" parent="Visual/Upper" unique_id=2068618627]
+color = Color(0.8509804, 0.32941177, 0.56078434, 1)
+polygon = PackedVector2Array(-16, -78, 16, -78, 16, -32, -16, -32)
+
+[node name="Arm" type="Polygon2D" parent="Visual/Upper" unique_id=524429539]
+color = Color(0.68078434, 0.26352942, 0.44862747, 1)
+polygon = PackedVector2Array(-4, -72, 4, -72, 4, -38, -4, -38)
+
+[node name="Head" type="Polygon2D" parent="Visual/Upper" unique_id=272055791]
+color = Color(0.9490196, 0.7882353, 0.627451, 1)
+polygon = PackedVector2Array(17, -94, 16.420738, -89.600075, 14.722431, -85.5, 12.020815, -81.97919, 8.499999, -79.277565, 4.3999243, -77.57926, -7.430936e-07, -77, -4.399924, -77.57926, -8.500001, -79.27757, -12.020815, -81.97919, -14.722431, -85.5, -16.420738, -89.600075, -17, -94, -16.420738, -98.399925, -14.722431, -102.5, -12.020816, -106.02081, -8.499998, -108.722435, -4.399923, -110.42074, 2.0272297e-07, -111, 4.3999233, -110.42074, 8.499998, -108.722435, 12.020813, -106.02081, 14.72243, -102.5, 16.42074, -98.39992)
+
+[node name="Hair" type="Polygon2D" parent="Visual/Upper" unique_id=1531199774]
+color = Color(0.41960785, 0.23137255, 0.12156863, 1)
+polygon = PackedVector2Array(-17, -112, 17, -112, 17, -102, -17, -102)
+
+[node name="Ponytail" type="Polygon2D" parent="Visual/Upper" unique_id=437715347]
+color = Color(0.41960785, 0.23137255, 0.12156863, 1)
+polygon = PackedVector2Array(-26, -108, -18, -108, -18, -82, -26, -82)
+
+[node name="Eye" type="Polygon2D" parent="Visual/Upper" unique_id=281718439]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(10, -96, 9.897778, -95.22354, 9.598076, -94.5, 9.121321, -93.87868, 8.5, -93.401924, 7.7764573, -93.10222, 7, -93, 6.2235427, -93.10222, 5.5, -93.401924, 4.8786798, -93.87868, 4.401924, -94.5, 4.1022224, -95.22354, 4, -96, 4.1022224, -96.77646, 4.401924, -97.5, 4.8786793, -98.12132, 5.5, -98.598076, 6.223543, -98.89778, 7, -99, 7.776457, -98.89778, 8.5, -98.598076, 9.12132, -98.12132, 9.598076, -97.5, 9.897778, -96.77646)

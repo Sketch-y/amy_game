@@ -1,11 +1,8 @@
 extends Node2D
-## Player character (Amy). Drawn with flat shapes; origin is at her feet.
+## Player character (Amy). Origin is at her feet; visuals live in player.tscn
+## and are drawn facing right (Visual is mirrored to face left).
 
 const SPEED := 260.0
-const SHIRT := Color("d9548f")
-const PANTS := Color("3d4a7a")
-const SKIN := Color("f2c9a0")
-const HAIR := Color("6b3b1f")
 
 var facing := 1
 var walking := false
@@ -13,6 +10,12 @@ var frozen := false
 var min_x := 0.0
 var max_x := 1000.0
 var _t := 0.0
+
+@onready var _visual: Node2D = $Visual
+@onready var _leg_l: Node2D = $Visual/LegL
+@onready var _leg_r: Node2D = $Visual/LegR
+@onready var _upper: Node2D = $Visual/Upper
+@onready var _arm: Node2D = $Visual/Upper/Arm
 
 
 func _process(delta: float) -> void:
@@ -24,20 +27,14 @@ func _process(delta: float) -> void:
 		_t += delta
 	else:
 		_t = 0.0
-	queue_redraw()
+	_animate()
 
 
-func _draw() -> void:
-	var swing: float = sin(_t * 14.0) * 7.0 if walking else 0.0
-	var bob: float = -absf(sin(_t * 14.0)) * 3.0 if walking else 0.0
-	# legs
-	draw_rect(Rect2(-11 + swing, -34, 9, 34), PANTS)
-	draw_rect(Rect2(2 - swing, -34, 9, 34), PANTS)
-	# body + arm
-	draw_rect(Rect2(-16, -78 + bob, 32, 46), SHIRT)
-	draw_rect(Rect2(-4 - swing * 0.6, -72 + bob, 8, 34), SHIRT.darkened(0.2))
-	# head, hair (with ponytail on the back side), eye
-	draw_circle(Vector2(0, -94 + bob), 17, SKIN)
-	draw_rect(Rect2(-17, -112 + bob, 34, 10), HAIR)
-	draw_rect(Rect2(-22 * facing - 4, -108 + bob, 8, 26), HAIR)
-	draw_circle(Vector2(7 * facing, -96 + bob), 3, Color.BLACK)
+func _animate() -> void:
+	var swing := sin(_t * 14.0) * 7.0 if walking else 0.0
+	var bob := -absf(sin(_t * 14.0)) * 3.0 if walking else 0.0
+	_visual.scale.x = facing
+	_leg_l.position.x = swing
+	_leg_r.position.x = -swing
+	_upper.position.y = bob
+	_arm.position.x = -swing * 0.6
