@@ -2,6 +2,16 @@
 
 [ext_resource type="Script" path="res://scripts/area.gd" id="1_o03m1"]
 [ext_resource type="Script" path="res://scripts/interactable.gd" id="2_q44rq"]
+[ext_resource type="Shader" path="res://shaders/pattern.gdshader" id="3_q44rq"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_b81nf"]
+shader = ExtResource("3_q44rq")
+shader_parameter/base_color = Color(0.64705884, 0.62352943, 0.5764706, 1)
+shader_parameter/tile_color = Color(0.58431375, 0.56078434, 0.5176471, 1)
+shader_parameter/cell_size = Vector2(128, 34)
+shader_parameter/gap = Vector2(70, 6)
+shader_parameter/row_shift = 0.5
+shader_parameter/offset = Vector2(-32, 13)
 
 [node name="Town" type="Node2D" unique_id=1547992920]
 script = ExtResource("1_o03m1")
@@ -867,212 +877,13 @@ polygon = PackedVector2Array(-26, -72, 14, -72, 14, -68, -26, -68)
 
 [node name="Floor" type="Node2D" parent="." unique_id=207989877]
 
-[node name="Ground" type="Polygon2D" parent="Floor" unique_id=2005913412]
+[node name="Ground" type="ColorRect" parent="Floor" unique_id=1952622385]
+material = SubResource("ShaderMaterial_b81nf")
+offset_top = 440.0
+offset_right = 3200.0
+offset_bottom = 540.0
+mouse_filter = 2
 color = Color(0.64705884, 0.62352943, 0.5764706, 1)
-polygon = PackedVector2Array(0, 440, 3200, 440, 3200, 540, 0, 540)
-
-[node name="Stones" type="Node2D" parent="Floor" unique_id=1467327353]
-position = Vector2(0, 440)
-
-[node name="Stone" type="Polygon2D" parent="Floor/Stones" unique_id=934875261]
-color = Color(0.58431375, 0.56078434, 0.5176471, 1)
-polygon = PackedVector2Array(3, 16, 61, 16, 61, 44, 3, 44)
-
-[node name="Stone2" type="Polygon2D" parent="Floor/Stones" unique_id=1348133439]
-color = Color(0.58431375, 0.56078434, 0.5176471, 1)
-polygon = PackedVector2Array(67, 50, 125, 50, 125, 78, 67, 78)
-
-[node name="Stone3" type="Polygon2D" parent="Floor/Stones" unique_id=945599860]
-color = Color(0.58431375, 0.56078434, 0.5176471, 1)
-polygon = PackedVector2Array(131, 16, 189, 16, 189, 44, 131, 44)
-
-[node name="Stone4" type="Polygon2D" parent="Floor/Stones" unique_id=1912082060]
-color = Color(0.58431375, 0.56078434, 0.5176471, 1)
-polygon = PackedVector2Array(195, 50, 253, 50, 253, 78, 195, 78)
-
-[node name="Stone5" type="Polygon2D" parent="Floor/Stones" unique_id=262263561]
-color = Color(0.58431375, 0.56078434, 0.5176471, 1)
-polygon = PackedVector2Array(259, 16, 317, 16, 317, 44, 259, 44)
-
-[node name="Stone6" type="Polygon2D" parent="Floor/Stones" unique_id=254165342]
-color = Color(0.58431375, 0.56078434, 0.5176471, 1)
-polygon = PackedVector2Array(323, 50, 381, 50, 381, 78, 323, 78)
-
-[node name="Stone7" type="Polygon2D" parent="Floor/Stones" unique_id=937599341]
-color = Color(0.58431375, 0.56078434, 0.5176471, 1)
-polygon = PackedVector2Array(387, 16, 445, 16, 445, 44, 387, 44)
-
-[node name="Stone8" type="Polygon2D" parent="Floor/Stones" unique_id=2137480377]
-color = Color(0.58431375, 0.56078434, 0.5176471, 1)
-polygon = PackedVector2Array(451, 50, 509, 50, 509, 78, 451, 78)
-
-[node name="Stone9" type="Polygon2D" parent="Floor/Stones" unique_id=1418215560]
-color = Color(0.58431375, 0.56078434, 0.5176471, 1)
-polygon = PackedVector2Array(515, 16, 573, 16, 573, 44, 515, 44)
-
-[node name="Stone10" type="Polygon2D" parent="Floor/Stones" unique_id=464674655]
-color = Color(0.58431375, 0.56078434, 0.5176471, 1)
-polygon = PackedVector2Array(579, 50, 637, 50, 637, 78, 579, 78)
-
-[node name="Stone11" type="Polygon2D" parent="Floor/Stones" unique_id=678585444]
-color = Color(0.58431375, 0.56078434, 0.5176471, 1)
-polygon = PackedVector2Array(643, 16, 701, 16, 701, 44, 643, 44)
-
-[node name="Stone12" type="Polygon2D" parent="Floor/Stones" unique_id=216140242]
-color = Color(0.58431375, 0.56078434, 0.5176471, 1)
-polygon = PackedVector2Array(707, 50, 765, 50, 765, 78, 707, 78)
-
-[node name="Stone13" type="Polygon2D" parent="Floor/Stones" unique_id=1881048657]
-color = Color(0.58431375, 0.56078434, 0.5176471, 1)
-polygon = PackedVector2Array(771, 16, 829, 16, 829, 44, 771, 44)
-
-[node name="Stone14" type="Polygon2D" parent="Floor/Stones" unique_id=1756316312]
-color = Color(0.58431375, 0.56078434, 0.5176471, 1)
-polygon = PackedVector2Array(835, 50, 893, 50, 893, 78, 835, 78)
-
-[node name="Stone15" type="Polygon2D" parent="Floor/Stones" unique_id=1877906828]
-color = Color(0.58431375, 0.56078434, 0.5176471, 1)
-polygon = PackedVector2Array(899, 16, 957, 16, 957, 44, 899, 44)
-
-[node name="Stone16" type="Polygon2D" parent="Floor/Stones" unique_id=281979639]
-color = Color(0.58431375, 0.56078434, 0.5176471, 1)
-polygon = PackedVector2Array(963, 50, 1021, 50, 1021, 78, 963, 78)
-
-[node name="Stone17" type="Polygon2D" parent="Floor/Stones" unique_id=1260831117]
-color = Color(0.58431375, 0.56078434, 0.5176471, 1)
-polygon = PackedVector2Array(1027, 16, 1085, 16, 1085, 44, 1027, 44)
-
-[node name="Stone18" type="Polygon2D" parent="Floor/Stones" unique_id=559414663]
-color = Color(0.58431375, 0.56078434, 0.5176471, 1)
-polygon = PackedVector2Array(1091, 50, 1149, 50, 1149, 78, 1091, 78)
-
-[node name="Stone19" type="Polygon2D" parent="Floor/Stones" unique_id=490339083]
-color = Color(0.58431375, 0.56078434, 0.5176471, 1)
-polygon = PackedVector2Array(1155, 16, 1213, 16, 1213, 44, 1155, 44)
-
-[node name="Stone20" type="Polygon2D" parent="Floor/Stones" unique_id=335528297]
-color = Color(0.58431375, 0.56078434, 0.5176471, 1)
-polygon = PackedVector2Array(1219, 50, 1277, 50, 1277, 78, 1219, 78)
-
-[node name="Stone21" type="Polygon2D" parent="Floor/Stones" unique_id=749262991]
-color = Color(0.58431375, 0.56078434, 0.5176471, 1)
-polygon = PackedVector2Array(1283, 16, 1341, 16, 1341, 44, 1283, 44)
-
-[node name="Stone22" type="Polygon2D" parent="Floor/Stones" unique_id=1830468542]
-color = Color(0.58431375, 0.56078434, 0.5176471, 1)
-polygon = PackedVector2Array(1347, 50, 1405, 50, 1405, 78, 1347, 78)
-
-[node name="Stone23" type="Polygon2D" parent="Floor/Stones" unique_id=1596006255]
-color = Color(0.58431375, 0.56078434, 0.5176471, 1)
-polygon = PackedVector2Array(1411, 16, 1469, 16, 1469, 44, 1411, 44)
-
-[node name="Stone24" type="Polygon2D" parent="Floor/Stones" unique_id=88622793]
-color = Color(0.58431375, 0.56078434, 0.5176471, 1)
-polygon = PackedVector2Array(1475, 50, 1533, 50, 1533, 78, 1475, 78)
-
-[node name="Stone25" type="Polygon2D" parent="Floor/Stones" unique_id=880030086]
-color = Color(0.58431375, 0.56078434, 0.5176471, 1)
-polygon = PackedVector2Array(1539, 16, 1597, 16, 1597, 44, 1539, 44)
-
-[node name="Stone26" type="Polygon2D" parent="Floor/Stones" unique_id=2025763941]
-color = Color(0.58431375, 0.56078434, 0.5176471, 1)
-polygon = PackedVector2Array(1603, 50, 1661, 50, 1661, 78, 1603, 78)
-
-[node name="Stone27" type="Polygon2D" parent="Floor/Stones" unique_id=1302219472]
-color = Color(0.58431375, 0.56078434, 0.5176471, 1)
-polygon = PackedVector2Array(1667, 16, 1725, 16, 1725, 44, 1667, 44)
-
-[node name="Stone28" type="Polygon2D" parent="Floor/Stones" unique_id=314622046]
-color = Color(0.58431375, 0.56078434, 0.5176471, 1)
-polygon = PackedVector2Array(1731, 50, 1789, 50, 1789, 78, 1731, 78)
-
-[node name="Stone29" type="Polygon2D" parent="Floor/Stones" unique_id=870740307]
-color = Color(0.58431375, 0.56078434, 0.5176471, 1)
-polygon = PackedVector2Array(1795, 16, 1853, 16, 1853, 44, 1795, 44)
-
-[node name="Stone30" type="Polygon2D" parent="Floor/Stones" unique_id=1170829456]
-color = Color(0.58431375, 0.56078434, 0.5176471, 1)
-polygon = PackedVector2Array(1859, 50, 1917, 50, 1917, 78, 1859, 78)
-
-[node name="Stone31" type="Polygon2D" parent="Floor/Stones" unique_id=488764551]
-color = Color(0.58431375, 0.56078434, 0.5176471, 1)
-polygon = PackedVector2Array(1923, 16, 1981, 16, 1981, 44, 1923, 44)
-
-[node name="Stone32" type="Polygon2D" parent="Floor/Stones" unique_id=159648995]
-color = Color(0.58431375, 0.56078434, 0.5176471, 1)
-polygon = PackedVector2Array(1987, 50, 2045, 50, 2045, 78, 1987, 78)
-
-[node name="Stone33" type="Polygon2D" parent="Floor/Stones" unique_id=2004923005]
-color = Color(0.58431375, 0.56078434, 0.5176471, 1)
-polygon = PackedVector2Array(2051, 16, 2109, 16, 2109, 44, 2051, 44)
-
-[node name="Stone34" type="Polygon2D" parent="Floor/Stones" unique_id=1517452178]
-color = Color(0.58431375, 0.56078434, 0.5176471, 1)
-polygon = PackedVector2Array(2115, 50, 2173, 50, 2173, 78, 2115, 78)
-
-[node name="Stone35" type="Polygon2D" parent="Floor/Stones" unique_id=1394245912]
-color = Color(0.58431375, 0.56078434, 0.5176471, 1)
-polygon = PackedVector2Array(2179, 16, 2237, 16, 2237, 44, 2179, 44)
-
-[node name="Stone36" type="Polygon2D" parent="Floor/Stones" unique_id=662627359]
-color = Color(0.58431375, 0.56078434, 0.5176471, 1)
-polygon = PackedVector2Array(2243, 50, 2301, 50, 2301, 78, 2243, 78)
-
-[node name="Stone37" type="Polygon2D" parent="Floor/Stones" unique_id=943572382]
-color = Color(0.58431375, 0.56078434, 0.5176471, 1)
-polygon = PackedVector2Array(2307, 16, 2365, 16, 2365, 44, 2307, 44)
-
-[node name="Stone38" type="Polygon2D" parent="Floor/Stones" unique_id=1005536211]
-color = Color(0.58431375, 0.56078434, 0.5176471, 1)
-polygon = PackedVector2Array(2371, 50, 2429, 50, 2429, 78, 2371, 78)
-
-[node name="Stone39" type="Polygon2D" parent="Floor/Stones" unique_id=1055894060]
-color = Color(0.58431375, 0.56078434, 0.5176471, 1)
-polygon = PackedVector2Array(2435, 16, 2493, 16, 2493, 44, 2435, 44)
-
-[node name="Stone40" type="Polygon2D" parent="Floor/Stones" unique_id=1751828393]
-color = Color(0.58431375, 0.56078434, 0.5176471, 1)
-polygon = PackedVector2Array(2499, 50, 2557, 50, 2557, 78, 2499, 78)
-
-[node name="Stone41" type="Polygon2D" parent="Floor/Stones" unique_id=1534134219]
-color = Color(0.58431375, 0.56078434, 0.5176471, 1)
-polygon = PackedVector2Array(2563, 16, 2621, 16, 2621, 44, 2563, 44)
-
-[node name="Stone42" type="Polygon2D" parent="Floor/Stones" unique_id=296313388]
-color = Color(0.58431375, 0.56078434, 0.5176471, 1)
-polygon = PackedVector2Array(2627, 50, 2685, 50, 2685, 78, 2627, 78)
-
-[node name="Stone43" type="Polygon2D" parent="Floor/Stones" unique_id=910084094]
-color = Color(0.58431375, 0.56078434, 0.5176471, 1)
-polygon = PackedVector2Array(2691, 16, 2749, 16, 2749, 44, 2691, 44)
-
-[node name="Stone44" type="Polygon2D" parent="Floor/Stones" unique_id=784494859]
-color = Color(0.58431375, 0.56078434, 0.5176471, 1)
-polygon = PackedVector2Array(2755, 50, 2813, 50, 2813, 78, 2755, 78)
-
-[node name="Stone45" type="Polygon2D" parent="Floor/Stones" unique_id=2051115068]
-color = Color(0.58431375, 0.56078434, 0.5176471, 1)
-polygon = PackedVector2Array(2819, 16, 2877, 16, 2877, 44, 2819, 44)
-
-[node name="Stone46" type="Polygon2D" parent="Floor/Stones" unique_id=306025927]
-color = Color(0.58431375, 0.56078434, 0.5176471, 1)
-polygon = PackedVector2Array(2883, 50, 2941, 50, 2941, 78, 2883, 78)
-
-[node name="Stone47" type="Polygon2D" parent="Floor/Stones" unique_id=1644359077]
-color = Color(0.58431375, 0.56078434, 0.5176471, 1)
-polygon = PackedVector2Array(2947, 16, 3005, 16, 3005, 44, 2947, 44)
-
-[node name="Stone48" type="Polygon2D" parent="Floor/Stones" unique_id=1727782103]
-color = Color(0.58431375, 0.56078434, 0.5176471, 1)
-polygon = PackedVector2Array(3011, 50, 3069, 50, 3069, 78, 3011, 78)
-
-[node name="Stone49" type="Polygon2D" parent="Floor/Stones" unique_id=1766881429]
-color = Color(0.58431375, 0.56078434, 0.5176471, 1)
-polygon = PackedVector2Array(3075, 16, 3133, 16, 3133, 44, 3075, 44)
-
-[node name="Stone50" type="Polygon2D" parent="Floor/Stones" unique_id=1323259474]
-color = Color(0.58431375, 0.56078434, 0.5176471, 1)
-polygon = PackedVector2Array(3139, 50, 3197, 50, 3197, 78, 3139, 78)
 
 [node name="Edge" type="Polygon2D" parent="Floor" unique_id=134630441]
 color = Color(0.49019608, 0.46666667, 0.42745098, 1)

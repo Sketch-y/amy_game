@@ -1,7 +1,26 @@
 [gd_scene format=3]
 
 [ext_resource type="Script" path="res://scripts/area.gd" id="1_6grsf"]
+[ext_resource type="Shader" path="res://shaders/pattern.gdshader" id="2_2si1f"]
 [ext_resource type="Script" path="res://scripts/interactable.gd" id="2_8e5s5"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ekelk"]
+shader = ExtResource("2_2si1f")
+shader_parameter/base_color = Color(0.8745098, 0.9411765, 0.84705883, 1)
+shader_parameter/tile_color = Color(0.8117647, 0.9019608, 0.7764706, 1)
+shader_parameter/cell_size = Vector2(60, 540)
+shader_parameter/gap = Vector2(40, 0)
+shader_parameter/row_shift = 0.0
+shader_parameter/offset = Vector2(0, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cykpe"]
+shader = ExtResource("2_2si1f")
+shader_parameter/base_color = Color(0.6392157, 0.49803922, 0.34509805, 1)
+shader_parameter/tile_color = Color(0.7882353, 0.63529414, 0.47843137, 1)
+shader_parameter/cell_size = Vector2(210, 25)
+shader_parameter/gap = Vector2(3, 2)
+shader_parameter/row_shift = 0.3333333333333333
+shader_parameter/offset = Vector2(0, -1)
 
 [node name="Shop" type="Node2D" unique_id=286284094]
 script = ExtResource("1_6grsf")
@@ -11,87 +30,13 @@ width = 1300.0
 [node name="Background" type="Parallax2D" parent="." unique_id=2028244729]
 scroll_scale = Vector2(0.35, 1)
 
-[node name="Wallpaper" type="Polygon2D" parent="Background" unique_id=626854281]
+[node name="Wallpaper" type="ColorRect" parent="Background" unique_id=1320985228]
+material = SubResource("ShaderMaterial_ekelk")
+offset_left = -20.0
+offset_right = 1139.0
+offset_bottom = 540.0
+mouse_filter = 2
 color = Color(0.8745098, 0.9411765, 0.84705883, 1)
-polygon = PackedVector2Array(-20, 0, 1139, 0, 1139, 540, -20, 540)
-
-[node name="Stripes" type="Node2D" parent="Background" unique_id=177435874]
-
-[node name="Stripe" type="Polygon2D" parent="Background/Stripes" unique_id=1329847732]
-color = Color(0.8117647, 0.9019608, 0.7764706, 1)
-polygon = PackedVector2Array(0, 0, 20, 0, 20, 540, 0, 540)
-
-[node name="Stripe2" type="Polygon2D" parent="Background/Stripes" unique_id=1390107379]
-color = Color(0.8117647, 0.9019608, 0.7764706, 1)
-polygon = PackedVector2Array(60, 0, 80, 0, 80, 540, 60, 540)
-
-[node name="Stripe3" type="Polygon2D" parent="Background/Stripes" unique_id=1359203590]
-color = Color(0.8117647, 0.9019608, 0.7764706, 1)
-polygon = PackedVector2Array(120, 0, 140, 0, 140, 540, 120, 540)
-
-[node name="Stripe4" type="Polygon2D" parent="Background/Stripes" unique_id=927883329]
-color = Color(0.8117647, 0.9019608, 0.7764706, 1)
-polygon = PackedVector2Array(180, 0, 200, 0, 200, 540, 180, 540)
-
-[node name="Stripe5" type="Polygon2D" parent="Background/Stripes" unique_id=518394755]
-color = Color(0.8117647, 0.9019608, 0.7764706, 1)
-polygon = PackedVector2Array(240, 0, 260, 0, 260, 540, 240, 540)
-
-[node name="Stripe6" type="Polygon2D" parent="Background/Stripes" unique_id=608074016]
-color = Color(0.8117647, 0.9019608, 0.7764706, 1)
-polygon = PackedVector2Array(300, 0, 320, 0, 320, 540, 300, 540)
-
-[node name="Stripe7" type="Polygon2D" parent="Background/Stripes" unique_id=25504560]
-color = Color(0.8117647, 0.9019608, 0.7764706, 1)
-polygon = PackedVector2Array(360, 0, 380, 0, 380, 540, 360, 540)
-
-[node name="Stripe8" type="Polygon2D" parent="Background/Stripes" unique_id=282302444]
-color = Color(0.8117647, 0.9019608, 0.7764706, 1)
-polygon = PackedVector2Array(420, 0, 440, 0, 440, 540, 420, 540)
-
-[node name="Stripe9" type="Polygon2D" parent="Background/Stripes" unique_id=951041787]
-color = Color(0.8117647, 0.9019608, 0.7764706, 1)
-polygon = PackedVector2Array(480, 0, 500, 0, 500, 540, 480, 540)
-
-[node name="Stripe10" type="Polygon2D" parent="Background/Stripes" unique_id=1462352333]
-color = Color(0.8117647, 0.9019608, 0.7764706, 1)
-polygon = PackedVector2Array(540, 0, 560, 0, 560, 540, 540, 540)
-
-[node name="Stripe11" type="Polygon2D" parent="Background/Stripes" unique_id=1718089883]
-color = Color(0.8117647, 0.9019608, 0.7764706, 1)
-polygon = PackedVector2Array(600, 0, 620, 0, 620, 540, 600, 540)
-
-[node name="Stripe12" type="Polygon2D" parent="Background/Stripes" unique_id=729853017]
-color = Color(0.8117647, 0.9019608, 0.7764706, 1)
-polygon = PackedVector2Array(660, 0, 680, 0, 680, 540, 660, 540)
-
-[node name="Stripe13" type="Polygon2D" parent="Background/Stripes" unique_id=307205626]
-color = Color(0.8117647, 0.9019608, 0.7764706, 1)
-polygon = PackedVector2Array(720, 0, 740, 0, 740, 540, 720, 540)
-
-[node name="Stripe14" type="Polygon2D" parent="Background/Stripes" unique_id=440673664]
-color = Color(0.8117647, 0.9019608, 0.7764706, 1)
-polygon = PackedVector2Array(780, 0, 800, 0, 800, 540, 780, 540)
-
-[node name="Stripe15" type="Polygon2D" parent="Background/Stripes" unique_id=16594951]
-color = Color(0.8117647, 0.9019608, 0.7764706, 1)
-polygon = PackedVector2Array(840, 0, 860, 0, 860, 540, 840, 540)
-
-[node name="Stripe16" type="Polygon2D" parent="Background/Stripes" unique_id=1241380552]
-color = Color(0.8117647, 0.9019608, 0.7764706, 1)
-polygon = PackedVector2Array(900, 0, 920, 0, 920, 540, 900, 540)
-
-[node name="Stripe17" type="Polygon2D" parent="Background/Stripes" unique_id=107658800]
-color = Color(0.8117647, 0.9019608, 0.7764706, 1)
-polygon = PackedVector2Array(960, 0, 980, 0, 980, 540, 960, 540)
-
-[node name="Stripe18" type="Polygon2D" parent="Background/Stripes" unique_id=1396954436]
-color = Color(0.8117647, 0.9019608, 0.7764706, 1)
-polygon = PackedVector2Array(1020, 0, 1040, 0, 1040, 540, 1020, 540)
-
-[node name="Stripe19" type="Polygon2D" parent="Background/Stripes" unique_id=1636214985]
-color = Color(0.8117647, 0.9019608, 0.7764706, 1)
-polygon = PackedVector2Array(1080, 0, 1100, 0, 1100, 540, 1080, 540)
 
 [node name="Buildings" type="Node2D" parent="." unique_id=1877638896]
 
@@ -633,128 +578,13 @@ polygon = PackedVector2Array(-20, -90, 20, -90, 20, -50, -20, -50)
 
 [node name="Floor" type="Node2D" parent="." unique_id=1174742486]
 
-[node name="Ground" type="Polygon2D" parent="Floor" unique_id=1860401380]
+[node name="Ground" type="ColorRect" parent="Floor" unique_id=1439456331]
+material = SubResource("ShaderMaterial_cykpe")
+offset_top = 440.0
+offset_right = 1300.0
+offset_bottom = 540.0
+mouse_filter = 2
 color = Color(0.7882353, 0.63529414, 0.47843137, 1)
-polygon = PackedVector2Array(0, 440, 1300, 440, 1300, 540, 0, 540)
-
-[node name="Seams" type="Node2D" parent="Floor" unique_id=2066654184]
-position = Vector2(0, 440)
-
-[node name="RowSeam" type="Polygon2D" parent="Floor/Seams" unique_id=2036371502]
-color = Color(0.6392157, 0.49803922, 0.34509805, 1)
-polygon = PackedVector2Array(0, 0, 1300, 0, 1300, 2, 0, 2)
-
-[node name="Seam" type="Polygon2D" parent="Floor/Seams" unique_id=1209837069]
-color = Color(0.6392157, 0.49803922, 0.34509805, 1)
-polygon = PackedVector2Array(0, 0, 3, 0, 3, 25, 0, 25)
-
-[node name="Seam2" type="Polygon2D" parent="Floor/Seams" unique_id=285022303]
-color = Color(0.6392157, 0.49803922, 0.34509805, 1)
-polygon = PackedVector2Array(210, 0, 213, 0, 213, 25, 210, 25)
-
-[node name="Seam3" type="Polygon2D" parent="Floor/Seams" unique_id=1620716673]
-color = Color(0.6392157, 0.49803922, 0.34509805, 1)
-polygon = PackedVector2Array(420, 0, 423, 0, 423, 25, 420, 25)
-
-[node name="Seam4" type="Polygon2D" parent="Floor/Seams" unique_id=765880416]
-color = Color(0.6392157, 0.49803922, 0.34509805, 1)
-polygon = PackedVector2Array(630, 0, 633, 0, 633, 25, 630, 25)
-
-[node name="Seam5" type="Polygon2D" parent="Floor/Seams" unique_id=611788988]
-color = Color(0.6392157, 0.49803922, 0.34509805, 1)
-polygon = PackedVector2Array(840, 0, 843, 0, 843, 25, 840, 25)
-
-[node name="Seam6" type="Polygon2D" parent="Floor/Seams" unique_id=1974506125]
-color = Color(0.6392157, 0.49803922, 0.34509805, 1)
-polygon = PackedVector2Array(1050, 0, 1053, 0, 1053, 25, 1050, 25)
-
-[node name="Seam7" type="Polygon2D" parent="Floor/Seams" unique_id=1663779603]
-color = Color(0.6392157, 0.49803922, 0.34509805, 1)
-polygon = PackedVector2Array(1260, 0, 1263, 0, 1263, 25, 1260, 25)
-
-[node name="RowSeam2" type="Polygon2D" parent="Floor/Seams" unique_id=713756433]
-color = Color(0.6392157, 0.49803922, 0.34509805, 1)
-polygon = PackedVector2Array(0, 25, 1300, 25, 1300, 27, 0, 27)
-
-[node name="Seam8" type="Polygon2D" parent="Floor/Seams" unique_id=1350510121]
-color = Color(0.6392157, 0.49803922, 0.34509805, 1)
-polygon = PackedVector2Array(70, 25, 73, 25, 73, 50, 70, 50)
-
-[node name="Seam9" type="Polygon2D" parent="Floor/Seams" unique_id=1061091215]
-color = Color(0.6392157, 0.49803922, 0.34509805, 1)
-polygon = PackedVector2Array(280, 25, 283, 25, 283, 50, 280, 50)
-
-[node name="Seam10" type="Polygon2D" parent="Floor/Seams" unique_id=791826868]
-color = Color(0.6392157, 0.49803922, 0.34509805, 1)
-polygon = PackedVector2Array(490, 25, 493, 25, 493, 50, 490, 50)
-
-[node name="Seam11" type="Polygon2D" parent="Floor/Seams" unique_id=1585673918]
-color = Color(0.6392157, 0.49803922, 0.34509805, 1)
-polygon = PackedVector2Array(700, 25, 703, 25, 703, 50, 700, 50)
-
-[node name="Seam12" type="Polygon2D" parent="Floor/Seams" unique_id=893790057]
-color = Color(0.6392157, 0.49803922, 0.34509805, 1)
-polygon = PackedVector2Array(910, 25, 913, 25, 913, 50, 910, 50)
-
-[node name="Seam13" type="Polygon2D" parent="Floor/Seams" unique_id=92607941]
-color = Color(0.6392157, 0.49803922, 0.34509805, 1)
-polygon = PackedVector2Array(1120, 25, 1123, 25, 1123, 50, 1120, 50)
-
-[node name="RowSeam3" type="Polygon2D" parent="Floor/Seams" unique_id=725686441]
-color = Color(0.6392157, 0.49803922, 0.34509805, 1)
-polygon = PackedVector2Array(0, 50, 1300, 50, 1300, 52, 0, 52)
-
-[node name="Seam14" type="Polygon2D" parent="Floor/Seams" unique_id=1818499424]
-color = Color(0.6392157, 0.49803922, 0.34509805, 1)
-polygon = PackedVector2Array(140, 50, 143, 50, 143, 75, 140, 75)
-
-[node name="Seam15" type="Polygon2D" parent="Floor/Seams" unique_id=2114860297]
-color = Color(0.6392157, 0.49803922, 0.34509805, 1)
-polygon = PackedVector2Array(350, 50, 353, 50, 353, 75, 350, 75)
-
-[node name="Seam16" type="Polygon2D" parent="Floor/Seams" unique_id=1521326765]
-color = Color(0.6392157, 0.49803922, 0.34509805, 1)
-polygon = PackedVector2Array(560, 50, 563, 50, 563, 75, 560, 75)
-
-[node name="Seam17" type="Polygon2D" parent="Floor/Seams" unique_id=1546602741]
-color = Color(0.6392157, 0.49803922, 0.34509805, 1)
-polygon = PackedVector2Array(770, 50, 773, 50, 773, 75, 770, 75)
-
-[node name="Seam18" type="Polygon2D" parent="Floor/Seams" unique_id=1491052271]
-color = Color(0.6392157, 0.49803922, 0.34509805, 1)
-polygon = PackedVector2Array(980, 50, 983, 50, 983, 75, 980, 75)
-
-[node name="Seam19" type="Polygon2D" parent="Floor/Seams" unique_id=189360993]
-color = Color(0.6392157, 0.49803922, 0.34509805, 1)
-polygon = PackedVector2Array(1190, 50, 1193, 50, 1193, 75, 1190, 75)
-
-[node name="RowSeam4" type="Polygon2D" parent="Floor/Seams" unique_id=245262770]
-color = Color(0.6392157, 0.49803922, 0.34509805, 1)
-polygon = PackedVector2Array(0, 75, 1300, 75, 1300, 77, 0, 77)
-
-[node name="Seam20" type="Polygon2D" parent="Floor/Seams" unique_id=1287134056]
-color = Color(0.6392157, 0.49803922, 0.34509805, 1)
-polygon = PackedVector2Array(210, 75, 213, 75, 213, 100, 210, 100)
-
-[node name="Seam21" type="Polygon2D" parent="Floor/Seams" unique_id=396818314]
-color = Color(0.6392157, 0.49803922, 0.34509805, 1)
-polygon = PackedVector2Array(420, 75, 423, 75, 423, 100, 420, 100)
-
-[node name="Seam22" type="Polygon2D" parent="Floor/Seams" unique_id=1247941885]
-color = Color(0.6392157, 0.49803922, 0.34509805, 1)
-polygon = PackedVector2Array(630, 75, 633, 75, 633, 100, 630, 100)
-
-[node name="Seam23" type="Polygon2D" parent="Floor/Seams" unique_id=66346697]
-color = Color(0.6392157, 0.49803922, 0.34509805, 1)
-polygon = PackedVector2Array(840, 75, 843, 75, 843, 100, 840, 100)
-
-[node name="Seam24" type="Polygon2D" parent="Floor/Seams" unique_id=979489308]
-color = Color(0.6392157, 0.49803922, 0.34509805, 1)
-polygon = PackedVector2Array(1050, 75, 1053, 75, 1053, 100, 1050, 100)
-
-[node name="Seam25" type="Polygon2D" parent="Floor/Seams" unique_id=1960526318]
-color = Color(0.6392157, 0.49803922, 0.34509805, 1)
-polygon = PackedVector2Array(1260, 75, 1263, 75, 1263, 100, 1260, 100)
 
 [node name="Edge" type="Polygon2D" parent="Floor" unique_id=513348161]
 color = Color(0.447451, 0.34862745, 0.24156862, 1)
